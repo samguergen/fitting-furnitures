@@ -27,18 +27,19 @@ body {
 	border: 1px solid black;
 	background: #c09853;
 	height: 80px;
-}
-form.navbar-form.navbar-left {
-	padding: 15px;
-}
-.navbar-right {
-	li {
-		font-size: 18px;
-    	padding: 15px;
+
+	form.navbar-form.navbar-left {
+		padding: 15px;
 	}
-	li a:hover {
-    text-decoration: none;
-    background-color: #eeeeee;
+	.navbar-right {
+		li {
+			font-size: 18px;
+	    	padding: 15px;
+		}
+		li a:hover {
+	    text-decoration: none;
+	    background-color: #eeeeee;
+		}
 	}
 }
 
@@ -50,4 +51,9 @@ footer {
     width: 100%;
     background: #c09853;
     border: 1px solid black;
+}
+/*.navbar, footer {
+	a {
+		color: white;
+	}*/
 }
