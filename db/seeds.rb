@@ -18,20 +18,20 @@ user_2.update_attributes(:furnitures_id => furni2)
 user_3.update_attributes(:furnitures_id => furni3)
 user_4.update_attributes(:furnitures_id => furni4)
 
-post1 = {:title => "World domination", :content => "What are your best plans for world domination?" , :user_id => user_1.id}
-post2 = {:title => "Ruby vs. Java", :content => "What is the difference between Ruby and Java?" , :user_id => user_2.id }
-post3 = {:title => "Put", :content => "What does put do in Ruby?" , :user_id => user_3.id}
-post4 = {:title => "Functional language", :content => "What is an example of a functional language?" , :user_id => user_4.id}
+post1 = {:title => "White drawer available for exchange or sale", :content => "Please comment on page only." , :user_id => user_1.id}
+post2 = {:title => "Big comfy bed!", :content => "Contact me asap, will be gone soon." , :user_id => user_2.id }
+post3 = {:title => "Small casual desk", :content => "Gr8 deal!" , :user_id => user_3.id}
+post4 = {:title => "Simple, all-purpose chair.", :content => "4 chairs available total." , :user_id => user_4.id}
 
 post_1 = Post.create!(post1)
 post_2 = Post.create!(post2)
 post_3 = Post.create!(post3)
 post_4 = Post.create!(post4)
 
-answer1 = {:content => "You should perfect your evil laugh", :post_id => post_1.id , :user_id => user_4.id }
-answer2 = {:content => "Ruby is a dynamic language, Java is a static one.", :post_id => post_2.id , :user_id => user_1.id }
-answer3 = {:content => "Put is like print but with an extra line", :post_id => post_3.id , :user_id => user_2.id }
-answer4 = {:content => "Javascript", :post_id => post_4.id , :user_id => user_3.id }
+answer1 = {:content => "I love this drawer! Save it for me plz.", :post_id => post_1.id , :user_id => user_4.id }
+answer2 = {:content => "errrr. Used bed? No thanks. Especially if you are a dude. I do not wish to know what I will see with ultraviolet light. Hehe.", :post_id => post_2.id , :user_id => user_1.id }
+answer3 = {:content => "cute.", :post_id => post_3.id , :user_id => user_2.id }
+answer4 = {:content => "If I want more than 4, where should I get them?", :post_id => post_4.id , :user_id => user_3.id }
 
 
 answer_1 = Comment.create!(answer1)
