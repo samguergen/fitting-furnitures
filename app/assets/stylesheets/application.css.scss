@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+    background: #ebccd1;
+}
+/*bootstrap override */
+.navbar {
+	border: 1px solid black;
+	background: #c09853;
+}
+.navbar-right {
+	ul li a:hover {
+    text-decoration: none;
+    background-color: #eeeeee;
+	}
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: #c09853;
+    border: 1px solid black;
+}
