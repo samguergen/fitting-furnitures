@@ -62,6 +62,18 @@ class UsersController < ApplicationController
     end
   end
 
+  #post
+  def login
+  end
+
+  #post
+  def signup
+  end
+
+  #delete
+  def logout
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
