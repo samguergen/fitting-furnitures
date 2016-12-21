@@ -47,7 +47,17 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       	<li><a href="/furnitures">Explore</a></li>
-        <li><a href="#">Login</a></li>
+      	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</span></a>
+          <ul class="dropdown-menu login-dropdown">
+          	<form class="login-form" action="/login" method="post">
+			    <p style="font-size: 25px">Log In</p>
+			    <hr>
+			    <p class="labels"><input type="text" name="email" placeholder="email"></input></p>
+			    <p class="labels"><input type="password" name="password" placeholder="password"></input></p>
+			    <button class="btn-success">Log in</button>
+			</form>
+          </ul>
       	<li><a href="#">Signup</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
@@ -66,6 +76,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>	
+
+<div class="login-box"></div>
+<div class="signup-box"></div>
 
 <%= yield %>
 

@@ -43,6 +43,13 @@ body {
 	}
 }
 
+.login-dropdown {
+	border-radius: 5px;
+	width: 400px;
+	background: #d6e9c6;
+    padding: 20px;
+}
+
 footer {
     position: absolute;
     left: 0;
@@ -51,9 +58,4 @@ footer {
     width: 100%;
     background: #c09853;
     border: 1px solid black;
-}
-/*.navbar, footer {
-	a {
-		color: white;
-	}*/
 }
