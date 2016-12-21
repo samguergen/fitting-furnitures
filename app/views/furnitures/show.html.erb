@@ -7,22 +7,22 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @furniture.description %>
+  <%= @furniture.content %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @furniture.image %>
+  <img src=<%= @furniture.image_url %>/>
 </p>
 
 <p>
   <strong>Measurement:</strong>
-  <%= @furniture.measurement %>
+  <%= @furniture.dimensions %>
 </p>
 
 <p>
-  <strong>Furnipoints:</strong>
-  <%= @furniture.furnipoints %>
+  <strong>Condition:</strong>
+  <%= @furniture.condition %>
 </p>
 
 <%= link_to 'Edit', edit_furniture_path(@furniture) %> |
