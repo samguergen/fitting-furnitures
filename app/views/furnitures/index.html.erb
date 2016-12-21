@@ -18,10 +18,10 @@
     <% @furnitures.each do |furniture| %>
       <tr>
         <td><%= furniture.name %></td>
-        <td><%= furniture.description %></td>
-        <td><%= furniture.image %></td>
-        <td><%= furniture.measurement %></td>
-        <td><%= furniture.furnipoints %></td>
+        <td><%= furniture.content %></td>
+        <td><%= furniture.image_url %></td>
+        <td><%= furniture.condition %></td>
+        <td><%= furniture.dimensions %></td>
         <td><%= link_to 'Show', furniture %></td>
         <td><%= link_to 'Edit', edit_furniture_path(furniture) %></td>
         <td><%= link_to 'Destroy', furniture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
