@@ -66,10 +66,6 @@ class UsersController < ApplicationController
   def login
   end
 
-  #post
-  def signup
-  end
-
   #delete
   def logout
   end

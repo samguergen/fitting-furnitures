@@ -49,7 +49,7 @@
       	<li><a href="/furnitures">Explore</a></li>
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</span></a>
-          <ul class="dropdown-menu login-dropdown">
+          <ul class="dropdown-menu auth-dropdown">
           	<form class="login-form" action="/login" method="post">
 			    <p style="font-size: 25px">Log In</p>
 			    <hr>
@@ -58,7 +58,30 @@
 			    <button class="btn-success">Log in</button>
 			</form>
           </ul>
-      	<li><a href="#">Signup</a></li>
+      	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signup</span></a>
+          <ul class="dropdown-menu auth-dropdown">
+			  <form class="signup-form" action="/users" method="post">
+			    <p style="font-size: 25px">Create an account</p>
+			    <hr>
+			    <div class="first-col">
+			      <p class="labels"><input type="text" name="user[email]" placeholder="email/login"></input></p>
+			      <p class="labels"><input type="password" name="user[password]" placeholder="password"></input></p>
+			      <p class="labels"><input type="password" name="user[password_confirmation]" placeholder="password confirmation"></input></p>
+			      <p class="labels"><input type="text" name="user[name]" placeholder="first and last name"></input></p>
+			      <p class="labels"><input type="integer" name="user[age]" placeholder="age"></input></p>
+			      <p class="labels"><input type="text" name="user[gender]" placeholder="gender"></input></p>
+			    </div>
+			    <div class="second-col">
+			      <p class="labels"><input type="text" name="user[age]" placeholder="age"></input></p>
+			      <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
+			      <p class="labels"><input type="file" name="user[photo]" ng-change="previewFile()" placeholder="Upload avatar"><br>
+			      <img src="" height="50" alt="Image preview..."></p>
+
+			      <button class="btn-success" ng-click="login()">Sign up</button>
+			    </div>
+			  </form>
+          </ul>          
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
           <ul class="dropdown-menu">
