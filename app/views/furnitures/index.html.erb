@@ -1,35 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Furnitures</h1>
+<div class="container">
+  <h1>Listing Furnitures</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Measurement</th>
-      <th>Furnipoints</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @furnitures.each do |furniture| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= furniture.name %></td>
-        <td><%= furniture.content %></td>
-        <td><%= furniture.image_url %></td>
-        <td><%= furniture.condition %></td>
-        <td><%= furniture.dimensions %></td>
-        <td><%= link_to 'Show', furniture %></td>
-        <td><%= link_to 'Edit', edit_furniture_path(furniture) %></td>
-        <td><%= link_to 'Destroy', furniture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Measurement</th>
+        <th>Furnipoints</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @furnitures.each do |furniture| %>
+        <tr>
+          <td><%= furniture.name %></td>
+          <td><%= furniture.content %></td>
+          <td><img src=<%= furniture.image_url %>/></td>
+          <td><%= furniture.condition %></td>
+          <td><%= furniture.dimensions %></td>
+          <td><%= link_to 'Show', furniture %></td>
+          <td><%= link_to 'Edit', edit_furniture_path(furniture) %></td>
+          <td><%= link_to 'Destroy', furniture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Furniture', new_furniture_path %>
+  <br>
+
+  <%= link_to 'New Furniture', new_furniture_path %>
+</div>
