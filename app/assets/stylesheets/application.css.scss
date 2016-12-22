@@ -45,10 +45,11 @@ body {
 }
 
 .auth-dropdown {
-	border-radius: 5px;
+	border-radius: 5px !important;
 	width: 400px;
 	background: #d6e9c6;
     padding: 20px;
+    border: 2px solid black;
 }
 
 footer {

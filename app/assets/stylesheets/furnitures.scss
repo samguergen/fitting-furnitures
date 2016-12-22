@@ -7,3 +7,29 @@
 tr, td {
 	padding: 2%;
 }
+
+.furni-form {
+	background: rgba(192, 152, 23, 0.24);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 14px;
+
+    input {
+    	padding: 5px;
+    }
+
+    input#furniture_content {
+	    width: 70%;
+	    height: 70px;
+	}
+	input#furniture_image_url {
+		width: 70%;
+	}
+}
+
+
+
