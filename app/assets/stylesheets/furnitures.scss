@@ -47,19 +47,21 @@ form#edit_furniture_1 {
 .furni-obj {
     padding: 10px;
     margin: 15px;
+    margin-top: 50px;
     position: relative;
-    height: 400px;
     width: 400px;
 }
 
 .furni-img {
     margin: 5px;
     width: 200px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     position: relative;
 }
 
-.descr-short {
-    width: 150px;
+.descri-short {
+    line-height: 1.8;
     position: relative;
 }
 
@@ -68,8 +70,19 @@ form#edit_furniture_1 {
     position: relative;
 }
 
+.descri-long {
+    text-align: justify;
+}
+
 .descr-long {
     width: 100%;
-    margin-top: 250px !important;
+    line-height: 1.6;
     position: relative;
+}
+
+.new-furni {
+    width: 100px;
+    font-weight: bold;
+    font-size:12px;
+    text-decoration: none;
 }
