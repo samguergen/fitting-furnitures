@@ -8,6 +8,8 @@ tr, td {
 	padding: 2%;
 }
 
+/* new furniture form */
+
 .furni-form {
 	background: rgba(192, 152, 23, 0.24);
     margin-left: auto;
@@ -36,3 +38,38 @@ form#edit_furniture_1 {
     text-align: center;
 }
 
+/* furni index */
+
+.furni-obj, .furni-img, .descr-short, .furni-line1, .descr-long {
+    float: left;
+}
+
+.furni-obj {
+    padding: 10px;
+    margin: 15px;
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+
+.furni-img {
+    margin: 5px;
+    width: 200px;
+    position: relative;
+}
+
+.descr-short {
+    width: 150px;
+    position: relative;
+}
+
+.furni-line1 {
+    width:100%;
+    position: relative;
+}
+
+.descr-long {
+    width: 100%;
+    margin-top: 250px !important;
+    position: relative;
+}

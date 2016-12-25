@@ -2,35 +2,27 @@
   <div class="furni-wrapper">
     <% @furnitures.each do |furniture| %>
 
-    <div class="furni-row1">
       <div class="furni-obj">
-        <div class="furni-img">
-          <img src=<%= furniture.image_url %>/>
-        </div>
-        <div class="descri-short">
-          <%= furniture.name %><br>
-          <%= furniture.condition %><br>
-          <%= furniture.dimensions %><br>
-          <%= furniture.furnipoints %><br>
+        <div class="furni-line1">
+          <div class="furni-img">
+            <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/>
+          </div>
+          <div class="descri-short">
+            item: <%= furniture.name %><br>
+            condition: <%= furniture.condition %><br>
+            dimensions: <%= furniture.dimensions %><br>
+            cost: <%= furniture.furnipoints %> furnipts<br>
+          </div>
         </div>
         <div class="descri-long">
           <%= furniture.content %><br>
         </div>
       </div>
 
-      <div class="furni-obj"></div>
-      <div class="furni-obj"></div>
-    </div>
-
-    <div class="furni-row2">
-      <div class="furni-obj"></div>
-      <div class="furni-obj"></div>
-      <div class="furni-obj"></div>
-    </div>
-
-<% end %>
-  </div>
+  <% end %>
+  
+  </div><!--furni-wrapper-->
   <br>
 
   <%= link_to 'New Furniture', new_furniture_path %>
-</div>
+</div><!--container-->
