@@ -1,29 +1,45 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="furni-show">
 
-<p>
-  <strong>Name:</strong>
-  <%= @furniture.name %>
-</p>
+    <div class="furni-top">
+      <strong>Item:</strong>
+      <%= @furniture.name %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @furniture.content %>
-</p>
+      <%= link_to 'Edit', edit_furniture_path(@furniture) %> |
+      <%= link_to 'Back', furnitures_path %>
+    </div>
 
-<p>
-  <strong>Image:</strong>
-  <img src=<%= @furniture.image_url %>/>
-</p>
+    <div class="furni-middle">
 
-<p>
-  <strong>Measurement:</strong>
-  <%= @furniture.dimensions %>
-</p>
+      <div class="furni-img">
+      <img src=<%= @furniture.image_url %>/>
+    </div>
 
-<p>
-  <strong>Condition:</strong>
-  <%= @furniture.condition %>
-</p>
+      <p>
+        <strong>Condition:</strong>
+        <%= @furniture.condition %>
+      </p>
 
-<%= link_to 'Edit', edit_furniture_path(@furniture) %> |
-<%= link_to 'Back', furnitures_path %>
+      <p>
+        <strong>Cost:</strong>
+        <%= @furniture.furnipoints %> furnipoints
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @furniture.content %>
+      </p>
+
+      <p>
+        <strong>Dimensions:</strong>
+        <%= @furniture.dimensions %>
+      </p>
+
+    </div>
+
+    <div class="furni-bottom">
+    </div>
+
+  </div>
+</div>

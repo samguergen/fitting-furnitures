@@ -5,9 +5,9 @@
 
       <div class="furni-obj">
         <div class="furni-line1">
-          <div class="furni-img">
-            <a href="/furnitures/<%= furniture.id %>"><img style="width:200px; height: 200px" src=<%= furniture.image_url %>/></a>
-          </div>
+          <a href="/furnitures/<%= furniture.id %>"><div class="furni-img">
+            <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/>
+          </div></a>
           <div class="descri-short">
             <b>item:</b> <%= furniture.name %><br>
             <b>condition:</b> <%= furniture.condition %><br>
