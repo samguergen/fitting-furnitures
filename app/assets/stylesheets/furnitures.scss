@@ -97,9 +97,34 @@ form#edit_furniture_1 {
 
 .furni-show {
 
+    .furni-top, .furni-middle, .furni-bottom {
+        float: left;
+    }
 
-    .furni-img {
-        width: 400px;
-        height: 400px;
+    .furni-top {
+        .furni-name, .furni-links {
+            float: left;
+        }
+        .furni-links {
+            width: 100px;
+            margin-left: 900px;
+            width: 100px;
+            position: absolute;
+        }
+    }
+
+    .furni-middle {
+        .furni-img {
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+        .furni-descri {
+            margin-left: 7%;
+            margin-top: 3%;
+            float: left;
+            width: 40%;
+            line-height: 1.5;
+        }
     }
 }
