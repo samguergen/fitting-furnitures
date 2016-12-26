@@ -33,10 +33,10 @@ post_2 = Post.create!(post2)
 post_3 = Post.create!(post3)
 post_4 = Post.create!(post4)
 
-answer1 = {:content => "I love this drawer! Save it for me plz.", :furniture_id => furniture_1.id , :user_id => user_4.id }
-answer2 = {:content => "errrr. Used bed? No thanks. Especially if you are a dude. I do not wish to know what I will see with ultraviolet light. Hehe.", :furniture_id => furniture_2.id , :user_id => user_1.id }
-answer3 = {:content => "cute.", :furniture_id => furniture_3.id , :user_id => user_2.id }
-answer4 = {:content => "If I want more than 4, where should I get them?", :furniture_id => furniture_4.id , :user_id => user_3.id }
+answer1 = {:content => "I love this drawer! Save it for me plz.", :furniture_id => drawer.id , :user_id => user_4.id }
+answer2 = {:content => "errrr. Used bed? No thanks. Especially if you are a dude. I do not wish to know what I will see with ultraviolet light. Hehe.", :furniture_id => bed.id , :user_id => user_1.id }
+answer3 = {:content => "cute.", :furniture_id => desk.id , :user_id => user_2.id }
+answer4 = {:content => "If I want more than 4, where should I get them?", :furniture_id => chair.id , :user_id => user_3.id }
 
 
 answer_1 = Comment.create!(answer1)

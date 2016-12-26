@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.text     "content"
     t.integer  "post_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "furniture_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "furnitures", force: :cascade do |t|
