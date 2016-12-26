@@ -10,6 +10,8 @@ class FurnituresController < ApplicationController
   # GET /furnitures/1
   # GET /furnitures/1.json
   def show
+    @furni = Furniture.find(params[:id])
+    # @comments = @furni.comments
   end
 
   # GET /furnitures/new

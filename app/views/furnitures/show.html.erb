@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
+  Furni: <%= @furni.comments.id %>
   <div class="furni-show">
 
     <div class="furni-top">
@@ -38,12 +39,15 @@
           <%= @furniture.dimensions %>
         </p>
 
-        <p class="new-comm"></p>
+        <p class="new-comm">
+        
+        </p>
       </div> <!-- furni-descri -->
     </div> <!--furni-middle -->
 
     <div class="furni-bottom">
       <p class="comm-history">
+        <%= render "comments/allcomments" %>
       </p>
     </div>
 

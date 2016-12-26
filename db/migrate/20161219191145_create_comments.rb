@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.text :content
       t.references :post
       t.references :user
+      t.references :furniture
       # t.references :post, index: true, foreign_key: true
       # t.references :commentable, polymorphic: true
 
