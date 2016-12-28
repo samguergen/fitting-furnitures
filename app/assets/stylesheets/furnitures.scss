@@ -128,7 +128,7 @@ form#edit_furniture_1 {
 
             .new-comm {
                 .dropdown-menu {
-                    padding: 15px 15px;
+                    background: rgba(245,245,220,0.44);
                 }
             }
         }
@@ -139,13 +139,7 @@ form#edit_furniture_1 {
         margin-top: 3%;
         padding: 5%;
 
-        .comm-history {
-            background: rgba(245,245,220,0.44);
-            border-radius: 5px;
-            border: 2px solid brown;
-            font-size: 12px;
-            min-height: 100px;
-            padding: 10px;
-        }
+        /* view rest in furnitures.scss */
+
     }
 }
