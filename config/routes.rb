@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   
   root 'home#index'
 
-  post '/login' => 'users#login'
-  delete '/logout' => 'users#logout'
+  post '/login' => 'sessions#login'
+  delete '/logout' => 'sessions#logout'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

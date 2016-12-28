@@ -35,17 +35,28 @@
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</span></a>
           <ul class="dropdown-menu auth-dropdown">
-          	<form class="login-form" action="/login" method="post">
+            <h1>Login</h1>
+
+              <%= form_tag '/login' do %>
+
+                Email: <%= text_field_tag :email %>
+                Password: <%= password_field_tag :password %>
+                <%= submit_tag "Submit" %>
+
+            <% end %>
+          <!-- 	<form class="login-form" action="/login" method="post">
     			    <p style="font-size: 25px">Log In</p>
     			    <hr>
     			    <p class="labels"><input type="text" name="user[email]" placeholder="email"></input></p>
     			    <p class="labels"><input type="password" name="user[password]" placeholder="password"></input></p>
     			    <button class="btn-success">Log in</button>
-			     </form>
+			     </form> -->
           </ul>
+        </li>
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signup</span></a>
           <ul class="dropdown-menu auth-dropdown">
+            <!--
     			  <form class="signup-form" action="/users" method="post">
     			    <p style="font-size: 25px">Create an account</p>
     			    <hr>
@@ -62,11 +73,28 @@
     			      <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
     			      <p class="labels"><input type="file" name="user[photo]" ng-change="previewFile()" placeholder="Upload avatar"><br>
     			      <img src="" height="50" alt="Image preview..."></p>
+              -->
+
+                <h1>Signup!</h1>
+
+                  <%= form_for :user, url: '/users' do |f| %>
+
+                    Name: <%= f.text_field :name %>
+                    age: <%= f.text_field :age %>
+                    location: <%= f.text_field :location %>
+                    gender: <%= f.text_field :gender %>
+                    description: <%= f.text_field :description %>
+                    Password: <%= f.password_field :password %>
+                    Password Confirmation: <%= f.password_field :password_confirmation %>
+                    <%= f.submit "Submit" %>
+
+                <% end %>
 
     			      <button class="btn-success" ng-click="login()">Sign up</button>
     			    </div>
 			     </form>
-          </ul>          
+          </ul>
+          </li>   
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -85,8 +113,14 @@
   </div><!-- /.container-fluid -->
 </nav>	
 
-<div class="login-box"></div>
-<div class="signup-box"></div>
+<div class="auth-info">
+  <% if current_user %>
+  Signed in as <%= current_user.name %>
+<% else %>
+  <%= link_to 'Login', '/login' %>
+<% end %>
+
+</div>
 
 <%= yield %>
 
