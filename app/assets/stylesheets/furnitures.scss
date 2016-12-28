@@ -131,4 +131,18 @@ form#edit_furniture_1 {
             }
         }
     }
+    .furni-bottom {
+        clear: both;
+        width: 100%;
+        margin-top: 7%;
+        padding: 5%;
+
+        .comm-history {
+            background: beige;
+            border-radius: 5px;
+            border: 2px solid brown;
+            font-size: 12px;
+            min-height: 100px;
+        }
+    }
 }

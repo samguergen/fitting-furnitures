@@ -1,3 +1,6 @@
-Each Furni: <% @furni.comments.each do |fur| %>
-<%= fur.content %>
+<% @furni.comments.each do |fur| %>
+<%= fur.title %> <br>
+<%= fur.content %> <br>
+<em> by: <%= fur.user.name %> </em> <br>
+<hr size="3">
 <% end %>
