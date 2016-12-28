@@ -25,8 +25,12 @@ body {
 /*bootstrap override */
 .navbar {
 	border: 1px solid black;
-	/*background: #c09853; */
 	height: 80px;
+
+	img#wooden {
+		height: 80px;
+    	width: 100%;
+	}
 
 	form.navbar-form.navbar-left {
 		padding: 15px;
