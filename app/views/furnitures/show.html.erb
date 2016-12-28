@@ -41,12 +41,13 @@
         <hr size="3">
 
         <p class="new-comm">
-          <div class="dropdown">
+          <div class="dropdown container">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Comment</button>
               <ul class="dropdown-menu">
                 <form class="comment-form" action="/comments" method="post">
-                  <hr>
-                  <p class="labels"><input type="text" name="comment[content]" placeholder="email"></input></p>
+                  <div class="form-group">
+                    <input type="text" name="comment[content]" class="form-control" id="content" placeholder="Enter comment">
+                  </div>
                   <button class="btn-success">Add Comment</button>
                 </form>
               </ul>
