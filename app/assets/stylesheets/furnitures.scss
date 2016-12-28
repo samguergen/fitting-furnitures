@@ -105,6 +105,11 @@ form#edit_furniture_1 {
         .furni-name, .furni-links {
             float: left;
         }
+        .furni-name {
+            h2 {
+                margin-left: 15%;
+            }
+        }
         .furni-links {
             width: 100px;
             margin-left: 900px;
