@@ -9,8 +9,7 @@
 <body>
 
 <nav class="navbar navbar-default">
-  <!-- <img src="/images/dark-woods.png" alt="wooden" /> -->
-  <%= image_tag("dark-wood.jpg", :alt => "wooden", :id => "wooden") %>
+  <%= image_tag("dark-wood.jpg", :alt => "wooden", :class => "wooden") %>
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -108,6 +107,7 @@
 <%= yield %>
 
 <footer>
+  <%= image_tag("dark-wood.jpg", :alt => "wooden", :class => "wooden") %>
 	<ul class="nav navbar-nav navbar-left">
 		<li><a href="#">Contact</a></li>
 		<li><a href="#">Careers</a></li>

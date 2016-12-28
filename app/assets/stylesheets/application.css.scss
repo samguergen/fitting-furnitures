@@ -22,15 +22,15 @@ body {
     margin: 0 0 100px; /* bottom = footer height */
     background: #ebccd1;
 }
+img.wooden {
+		height: 80px;
+    	width: 100%;
+    	position: absolute;
+	}
 /*bootstrap override */
 .navbar {
 	border: 1px solid black;
 	height: 80px;
-
-	img#wooden {
-		height: 80px;
-    	width: 100%;
-	}
 
 	form.navbar-form.navbar-left {
 		padding: 15px;
@@ -64,4 +64,7 @@ footer {
     width: 100%;
     background: #c09853;
     border: 1px solid black;
+    img.wooden {
+		height: 50px;
+	}
 }
