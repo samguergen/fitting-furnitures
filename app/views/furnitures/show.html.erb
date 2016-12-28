@@ -38,17 +38,25 @@
           <%= @furniture.content %>
         </p>
 
+        <hr size="3">
+
         <p class="new-comm">
-        
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Comment</button>
+              <ul class="dropdown-menu">
+                <form class="comment-form" action="/comments" method="post">
+                  <hr>
+                  <p class="labels"><input type="text" name="comment[content]" placeholder="email"></input></p>
+                  <button class="btn-success">Add Comment</button>
+                </form>
+              </ul>
+            </div>
         </p>
       </div> <!-- furni-descri -->
     </div> <!--furni-middle -->
 
     <div class="furni-bottom">
-      <p class="comm-history">
-
         <%= render "comments/allcomments" %>
-      </p>
     </div>
 
   </div>

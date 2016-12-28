@@ -1,6 +1,8 @@
+<p class="comm-history">
 <% @furni.comments.each do |fur| %>
 <%= fur.title %> <br>
-<%= fur.content %> <br>
+"<%= fur.content %>" <br>
 <em> by: <%= fur.user.name %> </em> <br>
-<hr size="3">
+________
 <% end %>
+</p>

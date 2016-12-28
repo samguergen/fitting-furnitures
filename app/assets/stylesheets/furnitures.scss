@@ -134,15 +134,16 @@ form#edit_furniture_1 {
     .furni-bottom {
         clear: both;
         width: 100%;
-        margin-top: 7%;
+        margin-top: 3%;
         padding: 5%;
 
         .comm-history {
-            background: beige;
+            background: rgba(245,245,220,0.44);
             border-radius: 5px;
             border: 2px solid brown;
             font-size: 12px;
             min-height: 100px;
+            padding: 10px;
         }
     }
 }
