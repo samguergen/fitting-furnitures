@@ -34,13 +34,14 @@
       	<li><a href="/furnitures">Explore</a></li>
 
         <% if session[:user_id] %>
-        <li class="dropdown">
+        <li><%= link_to "Logout", logout_path, method: "delete" %>
+<!--         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout</span></a>
           <ul class="dropdown-menu auth-dropdown">
-            <form class="login-form" action="/login" method="post">
+            <form class="logout-form" action="/logout" method="delete">
               <p style="font-size: 25px">Logout</p>
               <input type="submit" name="commit" value="Logout"/>
-           </form>
+           </form> -->
           </ul>
         </li>
         <% end %>
