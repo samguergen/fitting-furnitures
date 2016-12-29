@@ -32,16 +32,23 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       	<li><a href="/furnitures">Explore</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">My Goals Room</a></li>
+            <li><a href="#">My Store</a></li>
+          <li><a href="#">My Wishlist</a></li>
+          <li><a href="#">Upload Item</a></li>
+            
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </li>
 
         <% if session[:user_id] %>
         <li><%= link_to "Logout", logout_path, method: "delete" %>
-<!--         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logout</span></a>
-          <ul class="dropdown-menu auth-dropdown">
-            <form class="logout-form" action="/logout" method="delete">
-              <p style="font-size: 25px">Logout</p>
-              <input type="submit" name="commit" value="Logout"/>
-           </form> -->
           </ul>
         </li>
         <% end %>
@@ -85,20 +92,6 @@
 			     </form>
           </li>   
           <% end %>
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">My Profile</a></li>
-              <li><a href="#">My Goals Room</a></li>
-              <li><a href="#">My Store</a></li>
-          	<li><a href="#">My Wishlist</a></li>
-          	<li><a href="#">Upload Item</a></li>
-              
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -108,7 +101,7 @@
   <% if current_user %>
   Signed in as <%= current_user.name %>
 <% else %>
-  <%= link_to 'Login', '/login' %>
+  Welcome, newbie! Have you signed up yet?
 <% end %>
 
 </div>
