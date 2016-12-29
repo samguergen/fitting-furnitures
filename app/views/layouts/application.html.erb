@@ -57,21 +57,36 @@
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</span></a>
           <ul class="dropdown-menu auth-dropdown">
-          	<form class="login-form" action="/login" method="post">
-    			    <p style="font-size: 25px">Log In</p>
-    			    <hr>
-    			    <p class="labels"><input type="text" name="email" placeholder="email"></input></p>
-    			    <p class="labels"><input type="password" name="password" placeholder="password"></input></p>
-    			    <input type="submit" name="commit" value="Login"/>
-			     </form>
+              <%= form_tag '/login', :class=> "login-form" do %>
+              <p style="font-size: 25px">Log In</p>
+              <hr>              
+                Email: <%= text_field_tag :email %>
+                Password: <%= password_field_tag :password %>
+                <%= submit_tag "Submit" %>
+
+            <% end %>             
           </ul>
         </li>
 
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signup</span></a>
           <ul class="dropdown-menu auth-dropdown">
+            <%= form_for :user, url: '/users', :class=> "signup-form" do |f| %>
+            <div class="first-col">
+              Name: <%= f.text_field :name %>
+              age: <%= f.text_field :age %>
+              location: <%= f.text_field :location %>
+              gender: <%= f.text_field :gender %>
+              description: <%= f.text_field :description %>
+            </div>
+            <div class="second-col">
+              Email: <%= f.text_field :email %>
+              Password: <%= f.password_field :password %>
+              Password Confirmation: <%= f.password_field :password_confirmation %>
+              <%= f.submit "Submit" %>
+            <% end %>            
             
-    			  <form class="signup-form" action="/users" method="post">
+<!--     			  <form class="signup-form" action="/users" method="post">
     			    <p style="font-size: 25px">Create an account</p>
     			    <hr>
     			    <div class="first-col">
@@ -89,7 +104,7 @@
     			      <img src="" height="50" alt="Image preview..."></p>
     			      <input type="submit" name="commit" value="Signup"/>
     			    </div>
-			     </form>
+			     </form> -->
           </li>   
           <% end %>
       </ul>
