@@ -76,7 +76,7 @@
      			  <form class="signup-form" action="/users" method="post">
     			    <p style="font-size: 25px">Create an account</p>
     			    <hr>
-                <%= form_for signup_path do |f| %>
+                <%= form_for 'users'  do |f| %>
 
                     name: <%= f.text_field :name %> 
                     age: <%= f.text_field :age %>
