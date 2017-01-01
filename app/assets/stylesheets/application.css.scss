@@ -52,6 +52,10 @@ img.wooden {
 	}
 }
 
+.dropdown:open {
+	background: red;
+}
+
 .auth-dropdown {
 	border-radius: 5px !important;
 	width: 400px;
@@ -59,10 +63,45 @@ img.wooden {
     padding: 20px;
     border: 2px solid black;
 }
+
+.user-zone {
+	border-radius: 5px !important;
+	width: 200px;
+	background: #d6e9c6;
+    padding: 10px;
+    border: 2px solid black;
+
+    li:hover {
+	    	background: white;
+	    	border-radius: 5px;
+    	&a {
+    		background: white;
+    	}
+    	&a:hover {
+    		background: white;
+    	}
+    }
+    li a:visited {
+		color: red;    
+    }
+}
+
+.user-zone {
+	
+}
 	
 .dropdown {
 	color: #c09853;
 }
+
+.signup-form, .second-col {
+	margin-left: 30%;
+}
+
+/*.second-col {
+	margin-left: 30%;	
+}
+*/
 
 footer {
     position: absolute;
@@ -73,7 +112,7 @@ footer {
     background: #c09853;
     border: 1px solid black;
     .navbar-nav li a {
-    	color: #c09853;
+    	color: #c09853 !important;
     	font-weight: bold;
     }
     img.wooden {
