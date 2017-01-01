@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :furnitures
   resources :users
+
+  post '/signup' => 'sessions#signup'
   
   root 'home#index'
 

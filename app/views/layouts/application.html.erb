@@ -76,25 +76,24 @@
      			  <form class="signup-form" action="/users" method="post">
     			    <p style="font-size: 25px">Create an account</p>
     			    <hr>
-    			    <div class="first-col">
-    			      <p class="labels"><input type="text" name="user[email]" placeholder="email/login"></input></p>
-    			      <p class="labels"><input type="password" name="user[password]" placeholder="password"></input></p>
-    			      <p class="labels"><input type="password" name="user[password_confirmation]" placeholder="password confirmation"></input></p>
-    			      <p class="labels"><input type="text" name="user[name]" placeholder="first and last name"></input></p>
-    			      <p class="labels"><input type="integer" name="user[age]" placeholder="age"></input></p>
-                <p><form action="">
-                  <input type="radio" name="user[gender]" value="male"> Male
-                  <input type="radio" name="user[gender]" value="female"> Female
-                  <input type="radio" name="user[gender]" value="other"> Other
-                </form></p>
-    			    </div>
-    			    <div class="second-col">
+                <%= form_for signup_path do |f| %>
 
-    			      <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
-    			      <p class="labels"><input type="file" name="user[photo]" ng-change="previewFile()" placeholder="Upload avatar"><br>
-    			      <img src="" height="50" alt="Image preview..."></p>
-    			      <input type="submit" class="btn-success" name="commit" value="Signup"/>
-    			    </div>
+                    name: <%= f.text_field :name %> 
+                    age: <%= f.text_field :age %>
+                    location: <%= f.text_field :location %>
+                    description: <%= f.text_field :description %>
+                                    <p>
+                  <input type="radio" name="gender" value="male"> Male
+                  <input type="radio" name="gender" value="female"> Female
+                  <input type="radio" name="gender" value="other"> Other
+                </p>
+                    email: <%= f.text_field :email %>
+
+                    Password: <%= f.password_field :password %>
+                    Password Confirmation: <%= f.password_field :password_confirmation %>
+                    <%= f.submit "Submit" %>
+
+                  <% end %>
 			     </form> 
           </li>   
           <% end %>
