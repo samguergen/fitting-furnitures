@@ -30,6 +30,7 @@ class FurnituresController < ApplicationController
 
     respond_to do |format|
       if @furniture.save
+        puts 'furnitcha was saved'
         format.html { redirect_to @furniture, notice: 'Furniture was successfully created.' }
         format.json { render :show, status: :created, location: @furniture }
       else
@@ -71,6 +72,6 @@ class FurnituresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def furniture_params
-      params.require(:furniture).permit(:name, :description, :image, :measurement, :furnipoints)
+      params.require(:furniture).permit(:name, :content, :image_url, :dimensions, :condition, :furnipoints)
     end
 end
