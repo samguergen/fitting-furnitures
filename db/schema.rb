@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.string   "dimensions"
     t.string   "image_url"
     t.integer  "furnipoints"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
