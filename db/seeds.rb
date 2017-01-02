@@ -18,11 +18,6 @@ bed = Furniture.create!(furni2)
 desk = Furniture.create!(furni3)
 chair = Furniture.create!(furni4)
 
-user_1.update_attributes(:furnitures_id => drawer)
-user_2.update_attributes(:furnitures_id => bed)
-user_3.update_attributes(:furnitures_id => desk)
-user_4.update_attributes(:furnitures_id => chair)
-
 post1 = {:title => "White drawer available for exchange or sale", :content => "Please comment on page only." , :user_id => user_1.id}
 post2 = {:title => "Big comfy bed!", :content => "Contact me asap, will be gone soon." , :user_id => user_2.id }
 post3 = {:title => "Small casual desk", :content => "Gr8 deal!" , :user_id => user_3.id}
@@ -44,7 +39,3 @@ answer_2 = Comment.create!(answer2)
 answer_3 = Comment.create!(answer3)
 answer_4 = Comment.create!(answer4)
 
-# furniture_1.update_attributes(:comment_id => answer_1.id)
-# post_2.update_attributes(:comment_id => answer_2.id)
-# post_3.update_attributes(:comment_id => answer_3.id)
-# post_4.update_attributes(:comment_id => answer_4.id)

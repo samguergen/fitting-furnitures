@@ -7,9 +7,9 @@
 
       <div class="furni-links">
         <% if session[:user_id] == @furniture.user_id %>
-        <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %>
+        <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> | 
         <% end %>
-        | <%= link_to 'Back', furnitures_path %>
+        <%= link_to 'Back', furnitures_path %>
       </div>
     </div>
 
