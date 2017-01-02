@@ -6,8 +6,10 @@
       <div class="furni-name"><h2><%= @furniture.name %></h2></div>
 
       <div class="furni-links">
-        <%= link_to 'Edit', edit_furniture_path(@furniture) %> |
-        <%= link_to 'Back', furnitures_path %>
+        
+        <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %>
+        
+        | <%= link_to 'Back', furnitures_path %>
       </div>
     </div>
 
