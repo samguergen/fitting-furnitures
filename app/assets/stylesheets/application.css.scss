@@ -28,6 +28,13 @@ img.wooden {
     	position: absolute;
 	}
 /*bootstrap override */
+
+.navbar-default .navbar-brand {
+	position: absolute;
+	color: pink;
+	border: 1px solid pink;
+}
+
 .navbar {
 	border: 1px solid black;
 	height: 80px;

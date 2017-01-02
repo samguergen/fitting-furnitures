@@ -21,13 +21,18 @@
     <%= f.text_field :content %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :dimensions %><br>
+    <div class="label"><%= f.label :dimensions %></div><br>
     <%= f.text_field :dimensions %>
   </div>
+  <div class="field">
+    <div class="label"><%= f.label :condition %></div><br>
+    <%= f.text_field :condition %>
+  </div>    
+  <div class="field">
+    <div class="label"><%= f.label :image_url %></div><br>
+    <%= f.text_field :image_url %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
