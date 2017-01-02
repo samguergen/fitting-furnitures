@@ -72,6 +72,6 @@ class FurnituresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def furniture_params
-      params.require(:furniture).permit(:name, :content, :image_url, :dimensions, :condition, :furnipoints)
+      params.require(:furniture).permit(:name, :content, :image_url, :dimensions, :condition, :furnipoints).merge(user_id:session[:user_id])
     end
 end

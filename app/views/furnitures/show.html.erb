@@ -5,6 +5,7 @@
     <div class="furni-top">
       <div class="furni-name"><h2><%= @furniture.name %></h2></div>
 
+user id is: <%= @furniture.user_id %> 
       <div class="furni-links">
         <% if session[:user_id] == @furniture.user_id %>
         <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> | 
