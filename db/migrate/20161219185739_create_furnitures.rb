@@ -7,6 +7,7 @@ class CreateFurnitures < ActiveRecord::Migration
       t.string :dimensions
       t.string :image_url
       t.integer :furnipoints
+      t.references :user
 
       t.timestamps null: false
     end
