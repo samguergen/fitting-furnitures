@@ -30,12 +30,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        puts 'comment was savd'
-        puts 'relevant furni is '
-        puts @comment.furniture_id
         format.html { redirect_to furniture_path(@comment.furniture_id), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
-        # redirect_to furniture_path(@comment.furniture_id)
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
