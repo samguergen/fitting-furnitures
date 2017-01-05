@@ -16,7 +16,6 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @furnitchaz = Furniture.all
     @comment = Comment.new
   end
 
@@ -32,8 +31,11 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         puts 'comment was savd'
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        puts 'relevant furni is '
+        puts @comment.furniture_id
+        format.html { redirect_to furniture_path(@comment.furniture_id), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
+        # redirect_to furniture_path(@comment.furniture_id)
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -73,6 +75,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:content, :furniture_id ).merge(user_id:session[:user_id])
+      params.require(:comment).permit(:content, :furniture_id).merge(user_id:session[:user_id])
     end
 end
