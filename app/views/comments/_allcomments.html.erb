@@ -1,7 +1,9 @@
-<p class="comm-history">
+<div class="comm-history">
 <% @furni.comments.each do |fur| %>
-"<%= fur.content %>" <br>
-<em> by: <%= fur.user.name %> </em> <br>
-________
+	<p>
+		"<%= fur.content %>" <br>
+		<em> by: <%= fur.user.name %> </em> <br>
+		________
+	</p>
 <% end %>
-</p>
+</div>
