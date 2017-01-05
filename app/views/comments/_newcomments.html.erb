@@ -1,0 +1,26 @@
+       <p class="new-comm">
+            <% if current_user %>
+          <div style="width: 100px;" class="dropdown container">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Comment</button>
+              <ul class="dropdown-menu">
+
+<div = 'new_comment'>
+  <%= form_for Comment.new, html: {class: "create-comment"} do |f| %>
+    <%= f.label :content, 'Content: ' %>
+    <%= f.text_area(:content, cols: 100, rows: 10) %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :commentable_id, value: params[:commentable_id] %>
+    <%= f.hidden_field :commentable_type, value: params[:commentable_type] %>
+    <%= f.submit  %>
+  <% end %>
+</div>               
+
+
+
+              </ul>
+            </div>
+            <% else %>
+            Please log in to post a comment.
+            <% end %>
+          
+        </p>

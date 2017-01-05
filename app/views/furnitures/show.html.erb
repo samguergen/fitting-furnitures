@@ -42,24 +42,8 @@
 
         <hr size="3">
 
-        <p class="new-comm">
-            <% if current_user %>
-          <div style="width: 100px;" class="dropdown container">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Comment</button>
-              <ul class="dropdown-menu">
-                <form class="comment-form" action="/comments" method="post">
-                  <div class="form-group">
-                    <input type="text" name="comment[content]" class="form-control" id="content" placeholder="Enter comment"><br>
-                  </div>
-                  <button class="btn-success">Add Comment</button>
-                </form>
-              </ul>
-            </div>
-            <% else %>
-            Please log in to post a comment.
-            <% end %>
-          
-        </p>
+        <%= render "comments/newcomments" %>
+ 
       </div> <!-- furni-descri -->
     </div> <!--furni-middle -->
 
