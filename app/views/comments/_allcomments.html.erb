@@ -1,8 +1,13 @@
 <div class="comm-history">
-<% @furni.comments.each do |fur| %>
+<% @furni.comments.each do |comm| %>
 	<p>
-		"<%= fur.content %>" <br>
-		<em> by: <%= fur.user.name %> </em> <br>
+		"<%= comm.content %>" <br>
+		<em> by: <%= comm.user.name %> </em> <br>
+		<div class="comm-links">
+			<% if session[:user_id] == comm.user_id %>
+				<%= link_to 'Edit', edit_comment_path(comm) %> | <%= link_to "Delete", comm, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %>
+			<% end %>
+		</div>
 		________
 	</p>
 <% end %>
