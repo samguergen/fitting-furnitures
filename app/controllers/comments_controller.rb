@@ -16,6 +16,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+    @furnitchaz = Furniture.all
     @comment = Comment.new
   end
 

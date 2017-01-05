@@ -5,12 +5,11 @@
               <ul class="dropdown-menu">
 
 <div = 'new_comment'>
-  <%= form_for Comment.new, html: {class: "create-comment"} do |f| %>
+  <%= form_for Comment.new, html: {class: "comment-form"} do |f| %>
     <%= f.label :content, 'Content: ' %>
     <%= f.text_area(:content, cols: 100, rows: 10) %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.hidden_field :commentable_id, value: params[:commentable_id] %>
-    <%= f.hidden_field :commentable_type, value: params[:commentable_type] %>
+    <%= f.hidden_field :furniture_id, value: @furniture.id %>
     <%= f.submit  %>
   <% end %>
 </div>               

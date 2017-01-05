@@ -5,5 +5,10 @@
   <%= @comment.content %>
 </p>
 
+<p>
+  <strong>Author & Relevant Furniture</strong>
+  <%= @comment.user_id %>, <%= @comment.furniture_id %>
+</p>
+
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
