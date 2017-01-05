@@ -111,10 +111,16 @@ form#edit_furniture_1 {
             }
         }
         .furni-links {
-            width: 100px;
-            margin-left: 900px;
-            width: 100px;
+            text-align: center;
+            margin-left: 70%;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            width: 15%;
             position: absolute;
+            background: beige;
+            border-radius: 15px;
+            color: black;
         }
     }
 
