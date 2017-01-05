@@ -71,10 +71,7 @@ class CommentsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    # def comment_params
-    #   params.require(:comment).permit(:content).merge(user_id:session[:user_id], furniture_id: :furniture_id )
-    # end
     def comment_params
-      params.require(:comment).permit(:content)
-    end    
+      params.require(:comment).permit(:content).merge(user_id:session[:user_id], furniture_id: :furniture_id )
+    end
 end
