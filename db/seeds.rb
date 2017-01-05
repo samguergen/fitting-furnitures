@@ -18,16 +18,6 @@ bed = Furniture.create!(furni2)
 desk = Furniture.create!(furni3)
 chair = Furniture.create!(furni4)
 
-# post1 = {:title => "White drawer available for exchange or sale", :content => "Please comment on page only." , :user_id => user_1.id}
-# post2 = {:title => "Big comfy bed!", :content => "Contact me asap, will be gone soon." , :user_id => user_2.id }
-# post3 = {:title => "Small casual desk", :content => "Gr8 deal!" , :user_id => user_3.id}
-# post4 = {:title => "Simple, all-purpose chair.", :content => "4 chairs available total." , :user_id => user_4.id}
-
-# post_1 = Post.create!(post1)
-# post_2 = Post.create!(post2)
-# post_3 = Post.create!(post3)
-# post_4 = Post.create!(post4)
-
 answer1 = {:content => "I love this drawer! Save it for me plz.", :furniture_id => drawer.id , :user_id => user_4.id }
 answer2 = {:content => "errrr. Used bed? No thanks. Especially if you are a dude. I do not wish to know what I will see with ultraviolet light. Hehe.", :furniture_id => bed.id , :user_id => user_1.id }
 answer3 = {:content => "cute.", :furniture_id => desk.id , :user_id => user_2.id }
