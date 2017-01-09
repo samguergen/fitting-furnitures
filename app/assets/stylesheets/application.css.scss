@@ -21,17 +21,21 @@ body {
     font-style: italic;
 }
 
+img.logo {
+    height: 68px;
+}
+
 img.wooden {
 		height: 100px;
     	width: 100%;
     	position: absolute;
 	}
+
 /*bootstrap override */
 
 .navbar-default .navbar-brand {
 	position: absolute;
 	color: #c09853;
-	border: 1px solid pink;
 }
 
 .navbar {
