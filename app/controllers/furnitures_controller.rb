@@ -19,7 +19,6 @@ class FurnituresController < ApplicationController
 
   def by_category
     @furniturez = Furniture.where(name: params[:type])
-    # render :template => "category" 
     render "category"
   end
 

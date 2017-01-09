@@ -1,2 +1,28 @@
-Hello
-<%= @furniturez %>
+<h1> Filtered by: <%= @furniturez.first.name %></h1>
+
+
+    <% @furniturez.each do |furniture| %>
+
+      <div class="furni-obj">
+        <div class="furni-line1">
+          <a href="/furnitures/<%= furniture.id %>"><div class="furni-img">
+            <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/>
+          </div></a>
+          <div class="descri-short">
+            <b>item:</b> <%= furniture.name %><br>
+            <b>condition:</b> <%= furniture.condition %><br>
+            <b>dimensions:</b> <%= furniture.dimensions %><br>
+            <b>cost:</b> <%= furniture.furnipoints %> furnipts<br>
+          </div>
+        </div>
+        <!-- <div class="descri-long">
+          <%= furniture.content %><br>
+        </div> -->
+        <div class="furni-links">
+        <% if session[:user_id] == furniture.user_id %>
+        <%= link_to 'Edit', edit_furniture_path(furniture) %> | <%= link_to "Delete", furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
+        <% end %>
+      </div>
+      </div>
+
+  <% end %>
