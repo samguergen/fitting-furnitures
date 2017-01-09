@@ -17,7 +17,7 @@ body {
 	position: absolute;
     top: 1%;
     left: 18%;
-    color: pink;
+    color: #c09853;
     font-style: italic;
 }
 
@@ -30,21 +30,22 @@ img.wooden {
 
 .navbar-default .navbar-brand {
 	position: absolute;
-	color: pink;
+	color: #c09853;
 	border: 1px solid pink;
 }
 
 .navbar {
 	border: 1px solid black;
-	height: 80px;
+	height: 100px;
 
 	form.navbar-form.navbar-left {
 		padding: 15px;
 	}
 	.navbar-right {
 		width: 50%;
+		margin-top: 1%;
 		li {
-			font-size: 18px;
+			font-size: 19px;
 	    	padding: 15px;
 		}
 		li a {
@@ -88,7 +89,7 @@ img.wooden {
     	}
     }
     li a:visited {
-		color: red;    
+  
     }
 }
 

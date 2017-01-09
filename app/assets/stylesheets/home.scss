@@ -3,6 +3,17 @@
 .carousel-caption {
     top: 3%;
     color: pink;
+    h1 {
+    	font-family: Palatino;
+    }
+}
+
+.carousel-control {
+	border-radius: 5px;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+	background: #c09853;
 }
 
 .home-img {
@@ -10,4 +21,5 @@
 	margin-left: 10%;
 	margin-right: 10%;
 }
+
 
