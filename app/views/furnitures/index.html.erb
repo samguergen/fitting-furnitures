@@ -2,7 +2,7 @@
   <div class="furni-wrapper">
     <h2> Furnitures for Sales in your Area </h2>
     <div class="filter">Filter By Type:
-      <%= link_to "Bed", by_category_path(:type => "bed") %>
+      <%= link_to "Beds", by_category_path(:type => "bed") %> | <%= link_to "Chairs", by_category_path(:type => "chair") %> | <%= link_to "Drawers", by_category_path(:type => "drawer") %> | <%= link_to "Desks", by_category_path(:type => "desk") %>
     </div>
     <% @furnitures.each do |furniture| %>
 
