@@ -1,30 +1,28 @@
 class FurnituresController < ApplicationController
   before_action :set_furniture, only: [:show, :edit, :update, :destroy]
 
-  # GET /furnitures
-  # GET /furnitures.json
   def index
     @furnitures = Furniture.all
   end
 
-  # GET /furnitures/1
-  # GET /furnitures/1.json
   def show
     @furni = Furniture.find(params[:id])
     @comments = @furni.comments
   end
 
-  # GET /furnitures/new
   def new
     @furniture = Furniture.new
   end
 
-  # GET /furnitures/1/edit
   def edit
   end
 
-  # POST /furnitures
-  # POST /furnitures.json
+  def by_category
+    @furniturez = Furniture.where(name: params[:type])
+    # render :template => "category" 
+    render "category"
+  end
+
   def create
     @furniture = Furniture.new(furniture_params)
 
@@ -40,8 +38,6 @@ class FurnituresController < ApplicationController
     end
   end
 
-  # PATCH/PUT /furnitures/1
-  # PATCH/PUT /furnitures/1.json
   def update
     respond_to do |format|
       if @furniture.update(furniture_params)
@@ -54,8 +50,6 @@ class FurnituresController < ApplicationController
     end
   end
 
-  # DELETE /furnitures/1
-  # DELETE /furnitures/1.json
   def destroy
     @furniture.destroy
     respond_to do |format|
