@@ -1,6 +1,6 @@
 <div class="container furni-container">
   <div class="furni-wrapper">
-    <h2> Furnitures for Sales in your Area </h2>
+    <h2> Furnitures for Sale in your Area </h2>
     <div class="filter">Filter By Type:
       <%= link_to "Beds", by_category_path(:type => "bed") %> | <%= link_to "Chairs", by_category_path(:type => "chair") %> | <%= link_to "Drawers", by_category_path(:type => "drawer") %> | <%= link_to "Desks", by_category_path(:type => "desk") %>
     </div>
@@ -76,9 +76,13 @@
           <h4 class="modal-title">Trade this item</h4>
         </div>
         <div class="modal-body">
-          This item costs 
-            <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/>
-            furnipoints. Please select OK to confirm this purchase.  
+          Do you wish to trade this item for one of yours? If so, please choose from your list of available items: 
+          <% @current_furni.each do |furni| %>
+          <%= furni.name %>
+          <% end %>
+
+            <!-- <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/> -->
+ 
             
             <form method="post" action="/purchase" class="button_to" data-remote="true">
               <input type="hidden" name="furniId" id="furniId" value=""/>

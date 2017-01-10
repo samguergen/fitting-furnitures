@@ -3,6 +3,11 @@ class FurnituresController < ApplicationController
 
   def index
     @furnitures = Furniture.all
+    puts 'current user is'
+    puts session[:user_id]
+    @current_user = User.find(session[:user_id])
+    @current_furni = @current_user.furnitures
+
   end
 
   def show
