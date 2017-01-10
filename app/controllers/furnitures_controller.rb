@@ -26,6 +26,9 @@ class FurnituresController < ApplicationController
   # post
   def purchase
     puts 'inside purchase method'
+    furni_id = params[:furniId]
+    puts 'param is'
+    puts furni_id
   end
 
   def create
