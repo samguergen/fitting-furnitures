@@ -18,7 +18,7 @@
             <b>cost:</b> <%= furniture.furnipoints %> furnipts<br>
             <p class="trade-buy" style="margin-top:10px">
               <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModal" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Buy</button>
-              <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModalTrade" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Trade</button>
+              <button type="button" class="btn btn-default btn-md openmodal2" data-toggle="modal" data-target="#myModalTrade" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Trade</button>
             </p>
           </div>
         </div>
@@ -79,6 +79,7 @@
           Do you wish to trade this item for one of yours? </br>
           If so, please choose from your list of available items: 
           <form method="post" action="/trade" class="trade-form" data-remote="true">
+            <input type="hidden" name="furniId2" id="furniId2" value=""/>
             <div class="furni-imgs">
               <% @current_furni.each do |furni| %>
               <input type="radio" name="furnichosen" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
@@ -100,11 +101,18 @@
 
 <script>
 $(document).on("click", ".openmodal", function () {
-  console.log('was clicked');
+  console.log('purchase was clicked');
      var myModalData = $(this).data('id');
      console.log(myModalData);
      var myModalDataArr = myModalData.split(',')
      $(".modal-body #furniVal").val( myModalDataArr[0] );
      $(".modal-body form #furniId").val( myModalDataArr[1] );
+});
+$(document).on("click", ".openmodal2", function () {
+  console.log('trade was clicked');
+     var myModalData = $(this).data('id');
+     console.log(myModalData);
+     var myModalDataArr = myModalData.split(',')
+     $(".modal-body form #furniId2").val( myModalDataArr[1] );
 });
 </script>

@@ -29,12 +29,12 @@ class FurnituresController < ApplicationController
   end
 
   def trade
-    puts 'inside trade method'
-    puts 'the user is '
-    puts session[:user_id]
+    # puts 'inside trade method'
+    # puts 'the user is '
+    # puts session[:user_id]
     current_user = User.find(session[:user_id])
-    puts 'params are'
-    puts params[:furnichosen]
+    my_chosen_furni = Furniture.find(params[:furnichosen])
+    wanted_furni = Furniture.find(params[:furniId2])
   end
 
   # post
