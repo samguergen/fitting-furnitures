@@ -76,22 +76,15 @@
           <h4 class="modal-title">Trade this item</h4>
         </div>
         <div class="modal-body">
-          Do you wish to trade this item for one of yours? If so, please choose from your list of available items: 
+          Do you wish to trade this item for one of yours? <br>
+          If so, please choose from your list of available items: 
+          <div class="furni-imgs">
           <% @current_furni.each do |furni| %>
-          
- <div class="furni-obj">
-        <div class="furni-line1">
-          <div class="furni-img">
-            <img style="width:200px; height: 200px" src=<%= furni.image_url %>/>
-          </div>
-          <div class="descri-short">
-            <b>item:</b> <%= furni.name %><br>
-            <b>condition:</b> <%= furni.condition %><br>
-            <b>dimensions:</b> <%= furni.dimensions %><br>
-            <b>cost:</b> <%= furni.furnipoints %> furnipts<br>
-          </div>
-        </div>
+          <!-- <div class="furni-img"> -->
+            <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
+          <!-- </div> -->
           <% end %>
+        </div>
 
             <!-- <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/> -->
  
