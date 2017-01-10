@@ -50,9 +50,9 @@
           <h4 class="modal-title">Purchase this item</h4>
         </div>
         <div class="modal-body">
-          <p>This item costs furnipoints. Please select OK to confirm this purchase.</p>
-          <div id="modal-data"></div>
-          <input type="text" name="bookId" id="bookId" value=""/>
+          This item costs 
+            <input type="text" name="bookId" id="furniVal" value=""/>
+            furnipoints. Please select OK to confirm this purchase.  
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -70,6 +70,6 @@ $(document).on("click", ".openmodal", function () {
   console.log('was clicked');
      var myModalData = $(this).data('id');
      console.log(myModalData);
-     $(".modal-body #bookId").val( myModalData );
+     $(".modal-body #furniVal").val( myModalData );
 });
 </script>
