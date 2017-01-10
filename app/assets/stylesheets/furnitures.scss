@@ -110,7 +110,12 @@ form#edit_furniture_1 {
 
 input#furniVal {
     border: none;
-    width: 75px;
+    width: 30px;
+}
+
+input.ok-btn {
+    margin-top: 5%;
+    margin-left: 43%;
 }
 
 /* furni-show */
