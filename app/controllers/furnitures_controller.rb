@@ -25,7 +25,7 @@ class FurnituresController < ApplicationController
 
   # post
   def purchase
-    #Adding furnipts to owner
+    #1-Adding furnipts to owner
     furni_id = params[:furniId]
     the_furni = Furniture.find(params[:furniId])
     the_user = User.find(the_furni.user_id)
@@ -33,11 +33,15 @@ class FurnituresController < ApplicationController
     new_furnipts = furnipts + the_furni.furnipoints
     the_user.update(furnipoints: new_furnipts)
 
-    #Subtracting furnipts from buyer
+    #2-Subtracting furnipts from buyer
     curr_user = User.find(session[:user_id])
     curr_furnipts = curr_user.furnipoints
     curr_new_furnipts = curr_furnipts - the_furni.furnipoints
     curr_user.update(furnipoints: curr_new_furnipts)
+
+    #3-transferring furni from owner to buyer
+    the_furni.update(user_id: curr_user.id)
+
     redirect_to '/furnitures'
   end
 
