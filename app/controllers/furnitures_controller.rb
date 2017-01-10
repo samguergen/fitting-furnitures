@@ -33,6 +33,8 @@ class FurnituresController < ApplicationController
     puts 'the user is '
     puts session[:user_id]
     current_user = User.find(session[:user_id])
+    puts 'params are'
+    puts params[:furnichosen]
   end
 
   # post
