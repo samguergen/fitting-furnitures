@@ -17,9 +17,15 @@ class FurnituresController < ApplicationController
   def edit
   end
 
+  # get
   def by_category
     @furniturez = Furniture.where(name: params[:type])
     render "category"
+  end
+
+  # post
+  def purchase
+    puts 'inside purchase method'
   end
 
   def create

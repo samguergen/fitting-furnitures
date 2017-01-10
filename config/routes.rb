@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/by_category' => 'furnitures#by_category'
 
+  post '/purchase' => 'furnitures#purchase'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
