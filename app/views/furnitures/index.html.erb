@@ -78,12 +78,13 @@
         <div class="modal-body" style="text-align:center">
           Do you wish to trade this item for one of yours? </br>
           If so, please choose from your list of available items: 
-          <form method="post" action="/trade" class="trade-form" data-remote="true">>
+          <form method="post" action="/trade" class="trade-form" data-remote="true">
             <div class="furni-imgs">
               <% @current_furni.each do |furni| %>
-              <input type="radio" name="furni-img" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/><br>
+              <input type="radio" name="furni-img" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
               <% end %>
             </div>
+            <input type="submit" value="OK" class="btn btn-success ok-btn-radio">
           </form>
         </div>
         <div class="modal-footer">
