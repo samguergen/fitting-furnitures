@@ -33,8 +33,15 @@ class FurnituresController < ApplicationController
     # puts 'the user is '
     # puts session[:user_id]
     current_user = User.find(session[:user_id])
-    my_chosen_furni = Furniture.find(params[:furnichosen])
     wanted_furni = Furniture.find(params[:furniId2])
+    my_chosen_furni = Furniture.find(params[:furnichosen])
+    user_of_furni = User.find(wanted_furni.user_id)
+    
+    #switching furni in current user
+    wanted_furni.update(user_id: current_user.id)
+    my_chosen_furni.update(user_id: user_of_furni.id)
+
+    redirect_to '/furnitures'
   end
 
   # post
