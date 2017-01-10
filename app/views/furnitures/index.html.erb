@@ -51,12 +51,12 @@
         </div>
         <div class="modal-body">
           This item costs 
-            <input type="text" name="furniVal" id="furniVal" value=""/>
+            <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/>
             furnipoints. Please select OK to confirm this purchase.  
             <!-- <button type="button" class="btn btn-success">OK</button> -->
             
             <form method="post" action="/purchase" class="button_to" data-remote="true">
-              <input type="text" name="furniId" id="furniId" value=""/>
+              <input type="hidden" name="furniId" id="furniId" value=""/>
               <div><input value="OK" type="submit" /></div>
 #             </form>
 
