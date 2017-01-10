@@ -25,7 +25,7 @@
         <!-- <div class="descri-long">
           <%= furniture.content %><br>
         </div> -->
-        <div class="furni-links">
+        <div class="furni-links-index">
         <% if session[:user_id] == furniture.user_id %>
         <%= link_to 'Edit', edit_furniture_path(furniture) %> | <%= link_to "Delete", furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
         <% end %>
