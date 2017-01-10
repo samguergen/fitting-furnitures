@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   post '/purchase' => 'furnitures#purchase'
 
+  post '/trade' => 'furnitures#trade'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

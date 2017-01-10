@@ -28,6 +28,13 @@ class FurnituresController < ApplicationController
     render "category"
   end
 
+  def trade
+    puts 'inside trade method'
+    puts 'the user is '
+    puts session[:user_id]
+    current_user = User.find(session[:user_id])
+  end
+
   # post
   def purchase
     #1-Adding furnipts to owner

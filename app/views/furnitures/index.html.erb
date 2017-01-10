@@ -53,7 +53,7 @@
             <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/>
             furnipoints. Please select OK to confirm this purchase.  
             
-            <form method="post" action="/purchase" class="button_to" data-remote="true">
+            <form method="post" action="/purchase" class="purchase-form" data-remote="true">
               <input type="hidden" name="furniId" id="furniId" value=""/>
               <div><input class="btn btn-success ok-btn" value="OK" type="submit" /></div>
            </form>
@@ -75,24 +75,16 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Trade this item</h4>
         </div>
-        <div class="modal-body">
-          Do you wish to trade this item for one of yours? <br>
+        <div class="modal-body" style="text-align:center">
+          Do you wish to trade this item for one of yours? </br>
           If so, please choose from your list of available items: 
-          <div class="furni-imgs">
-          <% @current_furni.each do |furni| %>
-          <!-- <div class="furni-img"> -->
-            <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
-          <!-- </div> -->
-          <% end %>
-        </div>
-
-            <!-- <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/> -->
- 
-            
-            <form method="post" action="/purchase" class="button_to" data-remote="true">
-              <input type="hidden" name="furniId" id="furniId" value=""/>
-              <div><input class="btn btn-success ok-btn" value="OK" type="submit" /></div>
-           </form>
+          <form method="post" action="/trade" class="trade-form" data-remote="true">>
+            <div class="furni-imgs">
+              <% @current_furni.each do |furni| %>
+              <input type="radio" name="furni-img" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/><br>
+              <% end %>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
