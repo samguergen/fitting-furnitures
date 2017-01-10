@@ -27,8 +27,7 @@ class FurnituresController < ApplicationController
   def purchase
     puts 'inside purchase method'
     furni_id = params[:furniId]
-    puts 'param is'
-    puts furni_id
+    the_furni = Furniture.find(params[:furniId])
   end
 
   def create
