@@ -26,15 +26,24 @@ class FurnituresController < ApplicationController
   # post
   def purchase
     puts 'inside purchase method'
+    #Adding furnipts to owner
     furni_id = params[:furniId]
     the_furni = Furniture.find(params[:furniId])
-    puts 'user id is '
-    puts the_furni.user_id
     the_user = User.find(the_furni.user_id)
     furnipts = the_user.furnipoints
     new_furnipts = furnipts + the_furni.furnipoints
     the_user.update(furnipoints: new_furnipts)
 
+    #Subtracting furnipts from buyer
+    puts 'current user id is '
+    puts session[:user_id]
+    curr_user = User.find(session[:user_id])
+    curr_furnipts = curr_user.furnipoints
+    curr_new_furnipts = curr_furnipts - the_furni.furnipoints
+    puts 'curr_new_furni'
+    puts curr_new_furnipts
+    curr_user.update(furnipoints: curr_new_furnipts)
+    # puts @current_user
     redirect_to '/furnitures'
   end
 
