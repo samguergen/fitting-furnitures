@@ -28,6 +28,14 @@ class FurnituresController < ApplicationController
     puts 'inside purchase method'
     furni_id = params[:furniId]
     the_furni = Furniture.find(params[:furniId])
+    puts 'user id is '
+    puts the_furni.user_id
+    the_user = User.find(the_furni.user_id)
+    furnipts = the_user.furnipoints
+    new_furnipts = furnipts + the_furni.furnipoints
+    the_user.update(furnipoints: new_furnipts)
+
+    redirect_to '/furnitures'
   end
 
   def create
