@@ -4,6 +4,9 @@
     <div class="filter">Filter By Type:
       <%= link_to "Beds", by_category_path(:type => "bed") %> | <%= link_to "Chairs", by_category_path(:type => "chair") %> | <%= link_to "Drawers", by_category_path(:type => "drawer") %> | <%= link_to "Desks", by_category_path(:type => "desk") %>
     </div>
+
+   <div class="new-furni"> <%= link_to 'Add Furniture', new_furniture_path %> </div>
+
     <% @furnitures.each do |furniture| %>
 
         <div class="furni-obj">
@@ -37,8 +40,6 @@
   
   </div><!--furni-wrapper-->
   <br>
-
- <div class="new-furni"> <%= link_to 'New Furniture', new_furniture_path %> </div>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">

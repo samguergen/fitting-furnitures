@@ -50,9 +50,22 @@ form#edit_furniture_1 {
     margin-right: auto;
     width: 96%;
     h2 {
-        margin-top: 3%;
+        margin-top: 5%;
         text-align: center;
     }
+}
+
+.filter {
+    margin-top: 4%;
+}
+
+.new-furni {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    left: 76%;
+    margin-top: -2%;
+    position: absolute
 }
 
 .furni-obj {
@@ -92,13 +105,6 @@ form#edit_furniture_1 {
     width: 100%;
     line-height: 1.6;
     position: relative;
-}
-
-.new-furni {
-    width: 100px;
-    font-weight: bold;
-    font-size:12px;
-    text-decoration: none;
 }
 
 .furni-links-index {
