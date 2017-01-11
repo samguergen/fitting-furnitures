@@ -1,0 +1,15 @@
+.user-info, .user-img {
+	float: left;
+	margin: 5%;
+}
+
+.user-info {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.user-img {
+	img {
+		height: 200px
+	}	
+}

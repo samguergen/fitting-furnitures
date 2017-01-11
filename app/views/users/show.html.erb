@@ -1,39 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.name %>
-</p>
+<div class="user-profile">
+<div class="user-info">
+  <p>
+    <strong>First name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
+  <p>
+    <strong>Age:</strong>
+    <%= @user.age %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @user.location %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @user.location %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @user.gender %>
-</p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @user.gender %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @user.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
+  <p>
+    <strong>Description:</strong>
+    <%= @user.description %>
+  </p>
+</div>
+<div class="user-img">
   <img src="<%= @user.image %>"/>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
