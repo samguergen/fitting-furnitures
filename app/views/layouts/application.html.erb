@@ -80,11 +80,6 @@
                     age: <%= f.text_field :age %>
                     location: <%= f.text_field :location %>
                     description: <%= f.text_field :description %>
-     <!--                                <p>
-                  <input type="radio" name="user[gender]" value="male"> Male
-                  <input type="radio" name="user[gender]" value="female"> Female
-                  <input type="radio" name="user[gender]" value="other"> Other
-                </p> -->
 
                   <%= f.radio_button :gender, 'female', :checked => true %> 
                   <%= label :gender_female, 'Female' %>

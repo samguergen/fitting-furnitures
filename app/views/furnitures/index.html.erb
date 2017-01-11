@@ -1,16 +1,17 @@
 <div class="container furni-container">
   <div class="furni-wrapper">
-    <h2> Furnitures for Sale in your Area </h2>
+    <h2> Furniture for Sale in your Area </h2>
     <div class="filter">Filter By Type:
       <%= link_to "Beds", by_category_path(:type => "bed") %> | <%= link_to "Chairs", by_category_path(:type => "chair") %> | <%= link_to "Drawers", by_category_path(:type => "drawer") %> | <%= link_to "Desks", by_category_path(:type => "desk") %>
     </div>
     <% @furnitures.each do |furniture| %>
 
-      <div class="furni-obj">
-        <div class="furni-line1">
-          <a href="/furnitures/<%= furniture.id %>"><div class="furni-img">
-            <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/>
-          </div></a>
+        <div class="furni-obj">
+          <div class="furni-line1">
+          <div class="furni-img">
+            <a style="width:200px; height: 200px" href="/furnitures/<%= furniture.id %>">
+            <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/></a>
+          </div><!-- furni-img -->
           <div class="descri-short">
             <b>item:</b> <%= furniture.name %><br>
             <b>condition:</b> <%= furniture.condition %><br>
@@ -20,17 +21,17 @@
               <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModal" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Buy</button>
               <button type="button" class="btn btn-default btn-md openmodal2" data-toggle="modal" data-target="#myModalTrade" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Trade</button>
             </p>
-          </div>
-        </div>
+          </div><!-- descri-short -->
+        </div><!-- furni-line1 -->
         <!-- <div class="descri-long">
           <%= furniture.content %><br>
         </div> -->
         <div class="furni-links-index">
-        <% if session[:user_id] == furniture.user_id %>
-        <%= link_to 'Edit', edit_furniture_path(furniture) %> | <%= link_to "Delete", furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
-        <% end %>
-      </div>
-      </div>
+          <% if session[:user_id] == furniture.user_id %>
+          <%= link_to 'Edit', edit_furniture_path(furniture) %> | <%= link_to "Delete", furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
+          <% end %>
+        </div><!-- furni-links-index -->
+      </div><!-- furni-obj -->
 
   <% end %>
   
