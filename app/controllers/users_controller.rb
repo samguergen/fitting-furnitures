@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
     end
-    redirect_to '/'
+    redirect_to '/furnitures/new'
   end
 
   # POST /users.json
