@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :gender
       t.string :description
       t.string :image
-      # t.integer :furnipoints, :default => 500
+      t.integer :furnipoints, :default => 500
       t.references :furnitures
 
       t.timestamps null: false
