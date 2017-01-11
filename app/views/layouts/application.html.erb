@@ -36,6 +36,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Zone <span class="caret"></span></a>
           <ul class="dropdown-menu user-zone">
             
+            <% if current_user %>
+            <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
+            <% end %>
             <li><a href="/home/store">My Store</a></li>
             <li><a href="/home/wishlist">My Wishlist</a></li>
             <li><a href="/furnitures/new">Upload Item</a></li>
