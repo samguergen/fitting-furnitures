@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/contact'
   get 'home/careers'
+  get 'home/store'
+  get 'home/wishlist'
 
   resources :furnitures
   resources :users
