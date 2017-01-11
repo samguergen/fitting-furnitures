@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class="user-profile">
+  <h2>My Profile</h2>
+  <div class="user-img">
+  <img src="<%= @user.image %>"/>
+</div>
 <div class="user-info">
   <p>
-    <strong>First name:</strong>
     <%= @user.name %>
   </p>
 
@@ -32,10 +35,10 @@
     <%= @user.description %>
   </p>
 </div>
-<div class="user-img">
-  <img src="<%= @user.image %>"/>
-</div>
 
+
+<div class="user-links">
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
 </div>
