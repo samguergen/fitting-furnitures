@@ -72,12 +72,8 @@ class FurnituresController < ApplicationController
     puts 'inside wishlist method'
     puts params[:furniture_id]
     if session[:user_id]
-      # @curr_user = User.find(session[:user_id])
-      puts 'current user now is'
-      puts current_user
-      puts current_user.id
       @favorite_furni = Furniture.find(params[:furniture_id])
-      @favorite_furni.update(favoriter_id: params[:furniture_id])
+      @favorite_furni.update(favoriter_id: current_user.id)
       redirect_to '/home/wishlist'
     else 
       redirect_to '/home/error'
