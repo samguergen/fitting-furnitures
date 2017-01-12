@@ -43,7 +43,7 @@
   </div><!--furni-wrapper-->
   <br>
 
-  <% if current_user %>
+
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -58,10 +58,14 @@
             <input type="text" name="furniVal" id="furniVal" value="" readonly="readonly"/>
             furnipoints. Please select OK to confirm this purchase.  
             
-            <form method="post" action="/purchase" class="purchase-form" data-remote="true">
-              <input type="hidden" name="furniId" id="furniId" value=""/>
-              <div><input class="btn btn-success ok-btn" value="OK" type="submit" /></div>
-           </form>
+            <% if current_user %>
+              <form method="post" action="/purchase" class="purchase-form" data-remote="true">
+                <input type="hidden" name="furniId" id="furniId" value=""/>
+                <div><input class="btn btn-success ok-btn" value="OK" type="submit" /></div>
+              </form>
+            <% else %>
+             Please login or signup to continue this purchase.
+           <% end %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -83,15 +87,20 @@
         <div class="modal-body" style="text-align:center">
           Do you wish to trade this item for one of yours? </br>
           If so, please choose from your list of available items: 
+          </br>
+          <% if current_user %>
           <form method="post" action="/trade" class="trade-form" data-remote="true">
             <input type="hidden" name="furniId2" id="furniId2" value=""/>
             <div class="furni-imgs">
-              <% @current_furni.each do |furni| %>
-              <input type="radio" name="furnichosen" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
-              <% end %>
+                <% @current_furni.each do |furni| %>
+                <input type="radio" name="furnichosen" value="<%= furni.id %>"> <img style="width:100px; height: 100px" src=<%= furni.image_url %>/>
+                <% end %>
             </div>
             <input type="submit" value="OK" class="btn btn-success ok-btn-radio">
           </form>
+          <% else %>
+            Please login or signup to continue this trade.
+          <% end %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -100,7 +109,7 @@
       
     </div>
   </div>  
-  <% end %>
+
 
 </div><!--container-->
 
