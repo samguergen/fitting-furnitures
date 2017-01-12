@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   post '/trade' => 'furnitures#trade'
 
+  post '/wishlist' => 'furnitures#wishlist'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

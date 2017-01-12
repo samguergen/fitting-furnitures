@@ -67,6 +67,11 @@ class FurnituresController < ApplicationController
     redirect_to '/furnitures'
   end
 
+  #post
+  def wishlist
+    puts 'inside wishlist method'
+  end
+
   def create
     @furniture = Furniture.new(furniture_params)
 
