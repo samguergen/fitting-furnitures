@@ -68,19 +68,19 @@ class FurnituresController < ApplicationController
   end
 
   #post
-  def wishlist
-    puts 'inside wishlist method'
-    if session[:user_id]
-      @favorite_furni = Furniture.find(params[:furniture_id])
-      @favorite_furni.update(favoriter_id: current_user.id)
-      @user_fav = Furniture.where(favoriter_id: current_user.id)
-      puts 'user fav is'
-      @user_fav
-      redirect_to '/home/wishlist'
-    else 
-      redirect_to '/home/error'
-    end
-  end
+  # def wishlist
+  #   puts 'inside wishlist method'
+  #   if session[:user_id]
+  #     @favorite_furni = Furniture.find(params[:furniture_id])
+  #     @favorite_furni.update(favoriter_id: current_user.id)
+      
+  #     puts 'user fav is'
+  #     @user_fav
+  #     redirect_to '/home/wishlist'
+  #   else 
+  #     redirect_to '/home/error'
+  #   end
+  # end
 
   def create
     @furniture = Furniture.new(furniture_params)
