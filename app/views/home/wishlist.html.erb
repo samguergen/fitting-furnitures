@@ -1,7 +1,11 @@
 <% if current_user %>
 <div class="wishlist">
 
-My wishlist
+My wishlist:
+
+<% @current_user.favorites.each do |fav| %>
+<%= fav.name %>
+<% end %>
 
 
 </div>

@@ -70,6 +70,14 @@ class FurnituresController < ApplicationController
   #post
   def wishlist
     puts 'inside wishlist method'
+    puts params[:furniture_id]
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+      @current_user.update(favorites_id: params[:furniture_id])
+      redirect_to '/home/wishlist'
+    else 
+      redirect_to '/home/error'
+    end
   end
 
   def create

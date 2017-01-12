@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'home/careers'
   get 'home/wishlist'
   get 'home/settings'
+  get 'home/error'
 
   resources :furnitures
   resources :users
