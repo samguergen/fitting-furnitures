@@ -84,13 +84,14 @@
                     age: <%= f.text_field :age %>
                     location: <%= f.text_field :location %>
                     description: <%= f.text_field :description %>
-
-                  <%= f.radio_button :gender, 'female', :checked => true %> 
-                  <%= label :gender_female, 'Female' %>
-                  <%= f.radio_button :gender, 'male' %>
-                  <%= label :gender_male, 'male' %>
-                  <%= f.radio_button :gender, 'other' %>
-                  <%= label :gender_other, 'Other' %> </br>
+                    <p>
+                      <%= f.radio_button :gender, 'female', :checked => true %> 
+                      <%= label :gender_female, 'Female' %>
+                      <%= f.radio_button :gender, 'male' %>
+                      <%= label :gender_male, 'male' %>
+                      <%= f.radio_button :gender, 'other' %>
+                      <%= label :gender_other, 'Other' %> 
+                  </p>
 
                     email: <%= f.text_field :email %>
 

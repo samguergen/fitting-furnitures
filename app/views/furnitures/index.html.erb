@@ -26,9 +26,10 @@
             </p>
           </div><!-- descri-short -->
         </div><!-- furni-line1 -->
-        <!-- <div class="descri-long">
-          <%= furniture.content %><br>
-        </div> -->
+         <div class="descri-long">
+          <button type="button" class="btn btn-warning btn-sm">View Details</button>
+        <button type="button" class="btn btn-notice btn-sm">Save to Wishlist</button>
+        </div> 
         <div class="furni-links-index">
           <% if session[:user_id] == furniture.user_id %>
           <%= link_to 'Edit', edit_furniture_path(furniture) %> | <%= link_to "Delete", furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
@@ -41,6 +42,7 @@
   </div><!--furni-wrapper-->
   <br>
 
+  <% if current_user %>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -97,6 +99,7 @@
       
     </div>
   </div>  
+  <% end %>
 
 </div><!--container-->
 
