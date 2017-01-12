@@ -99,19 +99,22 @@ form#edit_furniture_1 {
 
 .descri-long {
     margin-top: 3%;
+    width:100%;
     text-align: center;
+    margin-left: 10%;
+    a {
+        display: inline-block !important;
+        float:left;
+    }
 }
 
 .btn-wishlist, .btn-save {
     background: #d7b591;
     font-size: 9px;
+    display: inline-block !important;
+    float:left;
 }
 
-.descr-long {
-    width: 100%;
-    line-height: 1.6;
-    position: relative;
-}
 
 .furni-links-index {
     text-align: center;
