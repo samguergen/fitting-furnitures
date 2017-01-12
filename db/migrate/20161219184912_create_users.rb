@@ -10,8 +10,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :description
       t.string :image
       t.integer :furnipoints, :default => 500, null: false
-      t.references :furnitures
-      t.references :favorites, references: :furnitures
+      # t.references :furnitures
+      # t.references :favorites, references: :furnitures
 
       t.timestamps null: false
     end

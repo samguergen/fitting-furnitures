@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.string   "image_url"
     t.integer  "furnipoints"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "favoriter_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,8 +44,6 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.string   "description"
     t.string   "image"
     t.integer  "furnipoints",     default: 500, null: false
-    t.integer  "furnitures_id"
-    t.integer  "favorites_id"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end

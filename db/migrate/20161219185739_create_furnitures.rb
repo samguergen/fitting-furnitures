@@ -8,6 +8,7 @@ class CreateFurnitures < ActiveRecord::Migration
       t.string :image_url
       t.integer :furnipoints
       t.references :user
+      t.references :favoriter, references: :user
 
       t.timestamps null: false
     end
