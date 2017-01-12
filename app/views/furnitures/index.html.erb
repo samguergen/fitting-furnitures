@@ -16,10 +16,7 @@
             <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/></a>
             <div class="descri-long">
               <a href="/furnitures/<%= furniture.id %>"><button type="button" class="btn-group btn-group-xs btn-wishlist">View Details</button></a>
-              <button type="button" class="btn-group btn-group-xs btn-save">
-              <%= button_to "Save to Wishlist", wishlist_path, method: :post, params: { furniture_id: furniture.id } %>
-              </button>
-              <!-- <button type="button" class="btn-group btn-group-xs btn-save">Save to Wishlist</button> -->
+              <%= button_to "Save to Wishlist", wishlist_path, class: 'btn-group btn-group-xs btn-save', params: { furniture_id: furniture.id } %>
             </div> 
           </div><!-- furni-img -->
           <div class="descri-short">
