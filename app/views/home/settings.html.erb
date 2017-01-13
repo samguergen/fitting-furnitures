@@ -2,13 +2,13 @@
 
 <div class="settings">
 
-<button class="btn btn-warning settings-edit"><a href="/users/<%= current_user %>/edit">Edit Profile</a></button>
+<a href="/users/<%= current_user %>/edit"><button class="btn btn-warning settings-edit">Edit Profile</button></a>
 <button class="btn btn-warning settings-cancel">
 	<%= form_for current_user, method: :delete do |f| %>
 		Delete your Account
 	<% end %>
 </button>
-<button class="btn btn-warning settings-cancel"><a href="/home/lottery">Furnipoint Lottery!</a></button>
+<a href="/home/lottery"><button class="btn btn-warning settings-cancel">Furnipoint Lottery!</button></a>
 
 </div>
 

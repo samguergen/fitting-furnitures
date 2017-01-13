@@ -28,14 +28,16 @@
 }
 
 .settings {
-	width: 60%;
-	margin: 10% 20% 10% 20%;
+	width: 56%;
+    margin: 15% 22% 25% 22%;
 
-	button {
-		margin: 4%;
+	button, a {
+		margin: 1%;
 		padding: 2%;
+		color: white;
+		font-size: 16px;
 
-		a, form {
+		form {
 			color: white;
 			font-size: 16px;
 		}
