@@ -82,6 +82,9 @@ img.wooden {
 	background: #d6e9c6;
     padding: 10px;
     border: 2px solid black;
+    li 	a{
+    	border-bottom: 1px solid white;
+    }
 
     li:hover {
 	    	background: white;
@@ -92,9 +95,6 @@ img.wooden {
     	&a:hover {
     		background: white;
     	}
-    }
-    li a:visited {
-  
     }
 }
 
@@ -136,4 +136,13 @@ footer {
 /* NAVLINX */
 .navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 26px;
+}
+
+.discover-more {
+	font-style: italic;
+	font-size: 10px !important;
+	word-wrap: nowrap;
+	color: white;
+    margin: -12px !important;
+    text-align: center;
 }

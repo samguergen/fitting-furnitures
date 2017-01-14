@@ -39,7 +39,9 @@
             
             <% if current_user %>
             <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
-            <% end %>
+            <% else %>
+            <li class="discover-more">Discover more User Zone options upon signup!</li>
+           <% end %>
             <li><a href="/furnitures/new">Upload Item</a></li>
             <li><a href="/home/settings">Settings</a></li>
           </ul>
