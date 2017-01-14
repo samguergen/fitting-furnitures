@@ -39,10 +39,7 @@
             
             <% if current_user %>
             <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
-            <% else %>
-            <li><a href="/users">All Profiles</a></li>
             <% end %>
-            <!-- <li><a href="/home/wishlist">My Wishlist</a></li> -->
             <li><a href="/furnitures/new">Upload Item</a></li>
             <li><a href="/home/settings">Settings</a></li>
           </ul>
