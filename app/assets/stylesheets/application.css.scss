@@ -47,7 +47,7 @@ img.wooden {
 		padding: 15px;
 	}
 	.navbar-right {
-		width: 50%;
+		/*width: 50%;*/
 		margin-top: 1%;
 		li {
 			font-size: 19px;
@@ -131,4 +131,11 @@ footer {
     img.wooden {
 		height: 50px;
 	}
+}
+
+.navlinx {
+	margin-left: -20% !important;
+}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 26px;
 }
