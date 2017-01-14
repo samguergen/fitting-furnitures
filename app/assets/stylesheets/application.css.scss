@@ -8,6 +8,7 @@ html {
     min-height: 100%;
 }
 body {
+	height: 100%;
     margin: 0 0 100px; /* bottom = footer height */
     /* background: #ebccd1; */
     background: #d7b591;
@@ -122,6 +123,7 @@ footer {
     width: 100%;
     background: #c09853;
     border: 1px solid black;
+
     .navbar-nav li a {
     	color: #c09853 !important;
     	font-weight: bold;
