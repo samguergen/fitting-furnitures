@@ -59,10 +59,12 @@
           <ul class="dropdown-menu auth-dropdown">
               <%= form_tag '/login', :class=> "login-form" do %>
               <p style="font-size: 25px">Log In</p>
-              <hr>              
-                Email: <%= text_field_tag :email %> </br>
-                Password: <%= password_field_tag :password %> </br>
-                <%= submit_tag "Submit" %>
+              <hr>
+
+                <div class="form-labels">Email:</br> 
+                  Password: </div> 
+                <div class="form-inputs"><%= text_field_tag :email %><%= password_field_tag :password %> </br>
+                <%= submit_tag "Submit" %></div>
 
             <% end %>             
           </ul>
@@ -77,26 +79,36 @@
     			    <p style="font-size: 25px">Create an account</p>
     			    <hr>
                 <%= form_for 'users'  do |f| %>
+                  <div class="form-labels">
+                    name: </br>
+                    age: </br>
+                    location: </br>
+                    description: </br>
+                    gender: </br>
+                    email: </br>
+                    password: </br>
+                    password confirmation: </br>
+                  </div>
 
-                    name: <%= f.text_field :name %> 
-                    age: <%= f.text_field :age %>
-                    location: <%= f.text_field :location %>
-                    description: <%= f.text_field :description %>
-                    <p>
+                  <div class="form-inputs">
+                    <%= f.text_field :name %> </br>
+                    <%= f.text_field :age %> </br>
+                    <%= f.text_field :location %> </br>
+                    <%= f.text_field :description %> </br>
                       <%= f.radio_button :gender, 'female', :checked => true %> 
                       <%= label :gender_female, 'Female' %>
                       <%= f.radio_button :gender, 'male' %>
                       <%= label :gender_male, 'male' %>
                       <%= f.radio_button :gender, 'other' %>
                       <%= label :gender_other, 'Other' %> 
-                  </p>
 
-                    email: <%= f.text_field :email %>
+                    <%= f.text_field :email %>
 
-                    Password: <%= f.password_field :password %>
-                    Password Confirmation: <%= f.password_field :password_confirmation %>
-                  <%= f.hidden_field :furnipoints, :value => 500 %>
+                    <%= f.password_field :password %>
+                    <%= f.password_field :password_confirmation %>
+                    <%= f.hidden_field :furnipoints, :value => 500 %>
                     <%= f.submit "Submit" %>
+                  </div>
 
                   <% end %>
 			     </form> 
