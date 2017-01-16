@@ -84,10 +84,10 @@
                     age: </br>
                     location: </br>
                     description: </br>
-                    gender: </br>
+                    <div>gender: </div></br>
                     email: </br>
                     password: </br>
-                    password confirmation: </br>
+                    pw confirmation: </br>
                   </div>
 
                   <div class="form-inputs">
@@ -95,15 +95,16 @@
                     <%= f.text_field :age %> </br>
                     <%= f.text_field :location %> </br>
                     <%= f.text_field :description %> </br>
-                      <%= f.radio_button :gender, 'female', :checked => true %> 
-                      <%= label :gender_female, 'Female' %>
+                    <div class="genders">
+                      <%= f.radio_button :gender, 'female', :checked => true %>
+                      <%= label :gender_female, 'Female' %> </br>
                       <%= f.radio_button :gender, 'male' %>
-                      <%= label :gender_male, 'male' %>
+                      <%= label :gender_male, 'male' %> </br>
                       <%= f.radio_button :gender, 'other' %>
-                      <%= label :gender_other, 'Other' %> 
+                      <%= label :gender_other, 'Other' %>  </br>
+                    </div>
 
                     <%= f.text_field :email %>
-
                     <%= f.password_field :password %>
                     <%= f.password_field :password_confirmation %>
                     <%= f.hidden_field :furnipoints, :value => 500 %>
