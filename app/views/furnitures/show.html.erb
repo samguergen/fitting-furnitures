@@ -7,6 +7,12 @@
 
 
         <a href="/furnitures"><button class="btn btn-warning back-btn2">Back to furniture list</button></a>
+
+            <div class="furni-links" style="margin-left: 60%">
+              <% if session[:user_id] == @furniture.user_id %>
+              <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> 
+              <% end %>
+            </div>        
       </div>
     
 
@@ -42,11 +48,7 @@
         <%= render "comments/newcomments" %>
  
       </div> <!-- furni-descri -->
-            <div class="furni-links">
-        <% if session[:user_id] == @furniture.user_id %>
-        <%= link_to 'Edit', edit_furniture_path(@furniture) %> | <%= link_to "Delete", @furniture, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %> | 
-        <% end %>
-      </div>
+
     </div> <!--furni-middle -->
 
     <div class="furni-bottom">
