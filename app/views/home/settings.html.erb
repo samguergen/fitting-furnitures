@@ -1,9 +1,11 @@
 <div class="settings">
 
-<a href="/users/<%= current_user %>/edit"><button class="btn btn-warning settings-edit">Edit Profile</button></a>
+<div class="setting-links">
+	<a href="/users/<%= current_user %>/edit"><button class="btn btn-warning settings-edit">Edit Profile</button></a>
 
-<%= button_to "Delete Your Account", { :action=>"destroy", :controller=>"users", id: current_user.id }, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning settings-cancel"  %>
+	<%= button_to "Delete Your Account", { :action=>"destroy", :controller=>"users", id: current_user.id }, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning settings-cancel"  %>
 
-<a href="/home/lottery"><button class="btn btn-warning settings-cancel">Furnipoint Lottery!</button></a>
+	<a href="/home/lottery"><button class="btn btn-warning settings-lottery">Furnipoint Lottery!</button></a>
+</div>
 
 </div>
