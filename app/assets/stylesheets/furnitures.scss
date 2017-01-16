@@ -165,8 +165,13 @@ input.ok-btn {
     }
 
     .furni-top {
+        margin-bottom: 2%;
         .furni-name, .furni-links {
             float: left;
+        }
+        .back-btn2 {
+            margin-left: 41rem;
+            margin-top: 2rem;
         }
         .furni-name {
             h2 {
@@ -181,13 +186,13 @@ input.ok-btn {
             font-size: 14px;
             width: 15%;
             position: absolute;
-            background: beige;
             border-radius: 15px;
             color: black;
         }
     }
 
     .furni-middle {
+        margin-top: 3%;
         .furni-img {
             width: 400px;
             height: 400px;
