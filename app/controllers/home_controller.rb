@@ -22,15 +22,15 @@ class HomeController < ApplicationController
   end
 
   def lottery_gamble
-    puts 'inside lottery'
+    puts 'inside lottery gamble'
     if current_user == nil
       redirect_to '/home/error'
     else
       curr_furni = current_user.furnipoints
       puts 'current furni'
       puts curr_furni
-      furni_opt = [(curr_furni + 30), (curr_furni - 50), (curr_furni +50), (curr_furni - 30)]
-      current_user.update({furnipoints: furni_opt[3] - 10 })
+      furni_option = curr_furni + Random.rand(-50..50)
+      current_user.update({furnipoints: furni_option - 10 })
       flash[:alert]= "Lottery completed. Check your new furnipoint count! :D"
       redirect_to "/home/lottery"
   	end  	
