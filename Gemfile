@@ -25,6 +25,9 @@ gem 'rpush'
 
 gem 'bcrypt'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'bootstrap-sass'
 
 gem 'railties'

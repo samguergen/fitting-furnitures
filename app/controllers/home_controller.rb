@@ -5,7 +5,15 @@ class HomeController < ApplicationController
   def wishlist
   	if current_user == nil
   		redirect_to '/home/error'
+    else
+      @user_fav = Wishlist.find_by(user_id: current_user.id)
+      puts 'fav is '
+      puts @user_fav
   	end  	
+  end
+
+  def make_wishlist
+    future_wish = params[:future_wish]
   end
 
   def settings

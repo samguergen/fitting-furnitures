@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219191145) do
+ActiveRecord::Schema.define(version: 20170117193931) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -26,12 +26,11 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.text     "content"
     t.string   "condition"
     t.string   "dimensions"
-    t.string   "image_url"
+    t.string   "image"
     t.integer  "furnipoints"
     t.integer  "user_id"
-    t.integer  "favoriter_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,5 +46,20 @@ ActiveRecord::Schema.define(version: 20161219191145) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
+
+  create_table "wishlist", id: false, force: :cascade do |t|
+    t.integer "furniture_id"
+    t.integer "user_id"
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.integer  "furniture_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "wishlists", ["furniture_id"], name: "index_wishlists_on_furniture_id"
+  add_index "wishlists", ["user_id"], name: "index_wishlists_on_user_id"
 
 end

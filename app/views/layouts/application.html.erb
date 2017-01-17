@@ -42,6 +42,7 @@
             <% else %>
             <li class="discover-more">Discover more User Zone options upon signup!</li>
            <% end %>
+           <li><a href="/home/wishlist">Wishlist</a></li>
             <li><a href="/furnitures/new">Upload Item</a></li>
             <li><a href="/home/settings">Settings</a></li>
           </ul>
@@ -95,6 +96,7 @@
                     <%= f.text_field :age %> </br>
                     <%= f.text_field :location %> </br>
                     <%= f.text_field :description %> </br>
+                    <%= f.label :image %></br>
                     <div class="genders">
                       <%= f.radio_button :gender, 'female', :checked => true %>
                       <%= label :gender_female, 'Female' %> </br>
@@ -107,6 +109,7 @@
                     <%= f.text_field :email %>
                     <%= f.password_field :password %>
                     <%= f.password_field :password_confirmation %>
+                    <%= f.file_field :image %>
                     <%= f.hidden_field :furnipoints, :value => 500 %>
                     <%= f.submit "Submit" %>
                   </div>

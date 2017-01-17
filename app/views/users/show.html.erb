@@ -4,7 +4,7 @@
   <h2>My Profile</h2>
   <div class="user-body">
     <div class="user-img">
-    <img src="<%= @user.image %>"/>
+    <%= image_tag @user.image.thumb.url %>
   </div>
   <div class="user-info">
     <p>
