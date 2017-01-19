@@ -5,7 +5,6 @@ class CreateFurnitures < ActiveRecord::Migration
       t.text :content
       t.string :condition
       t.string :dimensions
-      t.string :image_url
       t.string :image
       t.integer :furnipoints
       t.references :user
