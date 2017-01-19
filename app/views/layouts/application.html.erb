@@ -85,10 +85,11 @@
                     age: </br>
                     location: </br>
                     description: </br>
-                    <div>gender: </div></br>
+                    gender:</br>
                     <div style="margin-top: 24%; margin-bottom: -26%;">email: </div></br>
                     pass: </br>
                     pass again: </br>
+                    avatar: </br>
                   </div>
 
                   <div class="form-inputs">
@@ -96,7 +97,6 @@
                     <%= f.text_field :age %> </br>
                     <%= f.text_field :location %> </br>
                     <%= f.text_field :description %> </br>
-                    <%= f.label :image %></br>
                     <div class="genders">
                       <%= f.radio_button :gender, 'female', :checked => true %>
                       <%= label :gender_female, 'Female' %> </br>
