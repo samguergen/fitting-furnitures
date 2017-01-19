@@ -47,11 +47,6 @@ ActiveRecord::Schema.define(version: 20170117193931) do
     t.datetime "updated_at",                    null: false
   end
 
-  create_table "wishlist", id: false, force: :cascade do |t|
-    t.integer "furniture_id"
-    t.integer "user_id"
-  end
-
   create_table "wishlists", force: :cascade do |t|
     t.integer  "furniture_id"
     t.integer  "user_id"
