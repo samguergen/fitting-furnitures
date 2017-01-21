@@ -9,23 +9,31 @@ user_3 = User.create!(kevin)
 user_4 = User.create!(hoa)
 
 furni1 = {:name => "drawer", :content => "Two-tone finish in white wash replicated worn through paint with authentic touch and a replicated wood grained block pattern with authentic touch. Large scaled shapely bedroom collection features bun feet.", :condition => "like new", :dimensions => "100,150", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/1/drawer.jpg')), :furnipoints => 20, :user_id => user_1.id }
-furni2 = {:name => "bed", :content => "The Memoir 12 mattress will support body weight evenly, relieve pressure focused on the shoulders, hips, and feet, and eliminate motion disturbance. ", :condition => "used", :dimensions => "50,200", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/2/bed.jpg')), :furnipoints => 30, :user_id => user_2.id}
+furni2 = {:name => "bed", :content => "The Memoir 12 mattress will support body weight evenly, relieve pressure focused on the shoulders, hips, and feet, and eliminate motion disturbance. ", :condition => "used", :dimensions => "50,200", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/2/bed.jpg')), :furnipoints => 100, :user_id => user_2.id}
 furni3 = {:name => "desk", :content => "This beautiful desk is constructed of sturdy wood and comes in a diamond ash finish that complements any style decor. It has a spacious lower file drawer that accommodates letter-size hanging files so all your important documents can be neatly stored away.", :condition => "very used", :dimensions => "75,30", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/3/desk.jpg')), :furnipoints => 15, :user_id => user_3.id}
 furni4 = {:name => "chair", :content => "Multipurpose Stack Chair Contemporary Design 1000 lb. Weight Capacity Stacks up to 30 Chairs High Black Fabric Upholstery Lightweight Design ", :condition => "correct", :dimensions => "50,20", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/4/chair.jpg')) , :furnipoints => 5, :user_id => user_4.id}
+furni5 = {:name => "couch", :content => "Incredibly comfortable couch, with adjustable seat and unfolding pads for the legs!", :condition => "used", :dimensions => "50,20", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/5/couch.jpg')) , :furnipoints => 130, :user_id => user_1.id}
+furni6 = {:name => "table", :content => "Multipurpose Stack Chair Contemporary Design 1000 lb. Weight Capacity Stacks up to 30 Chairs High Black Fabric Upholstery Lightweight Design ", :condition => "correct", :dimensions => "10,20", :image => File.open(File.join(Rails.root, '/public/uploads/furniture/image/6/table.jpg')) , :furnipoints => 40, :user_id => user_2.id}
 
 drawer = Furniture.create!(furni1)
 bed = Furniture.create!(furni2)
 desk = Furniture.create!(furni3)
 chair = Furniture.create!(furni4)
+couch = Furniture.create!(furni5)
+table = Furniture.create!(furni6)
 
 answer1 = {:content => "I love this drawer! Save it for me plz.", :furniture_id => drawer.id , :user_id => user_4.id }
 answer2 = {:content => "errrr. Used bed? No thanks. Especially if you are a dude. I do not wish to know what I will see with ultraviolet light. Hehe.", :furniture_id => bed.id , :user_id => user_1.id }
 answer3 = {:content => "cute.", :furniture_id => desk.id , :user_id => user_2.id }
 answer4 = {:content => "If I want more than 4, where should I get them?", :furniture_id => chair.id , :user_id => user_3.id }
+answer5 = {:content => "I love this couch,  it seems so comfy!", :furniture_id => couch.id , :user_id => user_3.id }
+answer6 = {:content => "This table is going to fit my new room perfectly. Check out your notifications!", :furniture_id => table.id , :user_id => user_4.id }
 
 
 answer_1 = Comment.create!(answer1)
 answer_2 = Comment.create!(answer2)
 answer_3 = Comment.create!(answer3)
 answer_4 = Comment.create!(answer4)
+answer_5 = Comment.create!(answer5)
+answer_6 = Comment.create!(answer6)
 
