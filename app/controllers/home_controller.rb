@@ -14,13 +14,15 @@ class HomeController < ApplicationController
 
   def add_wishlist
     puts 'insidez add_wishlist'
-    relevant_furni = Furniture.find(params[:furni_id])
+    relevant_furni = Furniture.find(params[:furniture_id])
     relevant_user = User.find(params[:user_id])
     puts relevant_user
-    puts relean_furni
-    @user_fav = Wishlist.create(furni_id: relevant_furni.id, user_id: relevant_user.id)
-    # redirect_to '/home/wishlist'
-    redirect_to '/home/settings'
+    puts relevant_furni
+    wishlist = Wishlist.create(furniture_id: relevant_furni.id, user_id: relevant_user.id)
+    @user_fav = Wishlist.where(user_id: session[:user_id])
+    puts 'user_fav is'
+    puts @user_fav
+    redirect_to '/home/wishlist'
   end
 
   def settings
