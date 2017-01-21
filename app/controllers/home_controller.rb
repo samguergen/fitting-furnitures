@@ -12,8 +12,15 @@ class HomeController < ApplicationController
   	end  	
   end
 
-  def make_wishlist
-    future_wish = params[:future_wish]
+  def add_wishlist
+    puts 'insidez add_wishlist'
+    relevant_furni = Furniture.find(params[:furni_id])
+    relevant_user = User.find(params[:user_id])
+    puts relevant_user
+    puts relean_furni
+    @user_fav = Wishlist.create(furni_id: relevant_furni.id, user_id: relevant_user.id)
+    # redirect_to '/home/wishlist'
+    redirect_to '/home/settings'
   end
 
   def settings

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'home/lottery'
   get 'home/lottery_gamble'
   get 'home/error'
+  get 'home/wishlist'
   get '/by_category' => 'furnitures#by_category'
   
 
@@ -21,7 +22,6 @@ Rails.application.routes.draw do
   post '/signup' => 'sessions#signup'
   post '/purchase' => 'furnitures#purchase'
   post '/trade' => 'furnitures#trade'
-  post '/wishlist' => 'furnitures#wishlist'
-  # post '/lottery_gamble' => 'home#lottery_gamble'
+  post '/add_wishlist' => 'home#add_wishlist'
 
 end
