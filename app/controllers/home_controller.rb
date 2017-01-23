@@ -27,12 +27,12 @@ class HomeController < ApplicationController
     if current_user == nil
       redirect_to '/home/error'
     else
-      @user_fav = Wishlist.find_by(user_id: current_user.id)
+      @user_fav = Wishlist.where(user_id: current_user.id)
       puts 'fav is '
       puts @user_fav
       puts 'favz furni id'
-      puts @user_fav.furniture_id
-      puts @user_fav.user_id
+      # puts @user_fav.furniture_id
+      # puts @user_fav.user_id
     end   
   end  
 
