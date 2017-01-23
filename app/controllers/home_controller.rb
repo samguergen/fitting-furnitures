@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   def index    
   end
 
+#function to remove multiples from user_fav
+#when joint table replaced by 12many, check for doubles in if sttemnt
   def add_wishlist
     puts 'insidez add_wishlist'
     relevant_furni = Furniture.find(params[:furniture_id])
@@ -37,6 +39,7 @@ class HomeController < ApplicationController
         furni = Furniture.find(fav.furniture_id)
         @fav_furnis << furni
       end
+      @fav_furnis = @fav_furnis.uniq
       return @fav_furnis
     end   
   end  
