@@ -7,20 +7,24 @@ class HomeController < ApplicationController
     relevant_furni = Furniture.find(params[:furniture_id])
     relevant_user = User.find(params[:user_id])
     puts relevant_user
+    puts current_user
     puts relevant_furni
-    wishlist = Wishlist.create(furniture_id: relevant_furni.id, user_id: relevant_user.id)
-    puts 'wishlist is'
-    puts wishlist
-    if wishlist.save
-      @user_fav = Wishlist.where(user_id: session[:user_id])
-      puts 'user_fav is'
-      puts @user_fav.count
+    if relevant_user == nil
+      puts 'already wishlist'
+      flash[:alert] = "You already added this item to your wishlist!"
+      # redirect_to '/home/wishlist'
     else
-      flash[:alert] = "Wishlist couldn't be saved"
+      puts 'creating new wishlist'
+      wishlist = Wishlist.create(furniture_id: relevant_furni.id, user_id: relevant_user.id)
+      if wishlist.save
+        @user_fav = Wishlist.where(user_id: session[:user_id])
+        puts 'user_fav is'
+        puts @user_fav
+      else
+        flash[:alert] = "Wishlist couldn't be saved"
+      end
     end
-    # redirect_to '/home/wishlist', :fav => @user_fav
-    @fav = Furniture.where()
-    redirect_to home_wish_path(@user_fav)
+    redirect_to '/home/wishlist'
   end
 
   def wishlist
