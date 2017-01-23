@@ -25,7 +25,7 @@
             <b>dimensions:</b> <%= furniture.dimensions %><br>
             <b>cost:</b> <%= furniture.furnipoints %> furnipts<br>
             <p class="trade-buy" style="margin-top:10px">
-              <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModal" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Buy</button>
+              <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModalBuy" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Buy</button>
               <button type="button" class="btn btn-default btn-md openmodal2" data-toggle="modal" data-target="#myModalTrade" data-id="<%= furniture.furnipoints %>, <%= furniture.id %>">Trade</button>
             </p>
           </div><!-- descri-short -->
@@ -44,8 +44,8 @@
   <br>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <!-- ModalPurchase -->
+  <div class="modal fade" id="myModalBuy" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
