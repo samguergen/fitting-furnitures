@@ -19,10 +19,16 @@ class HomeController < ApplicationController
     puts relevant_user
     puts relevant_furni
     wishlist = Wishlist.create(furniture_id: relevant_furni.id, user_id: relevant_user.id)
-    @user_fav = Wishlist.where(user_id: session[:user_id])
-    puts 'user_fav is'
-    puts @user_fav
-    redirect_to '/home/wishlist'
+    puts 'wishlist is'
+    puts wishlist
+    if wishlist.save
+      @user_fav = Wishlist.where(user_id: session[:user_id])
+      puts 'user_fav is'
+      puts @user_fav.count
+    else
+      flash[:alert] = "Wishlist couldn't be saved"
+    end
+    redirect_to '/home/wishlist', :fav => @user_fav
   end
 
   def settings

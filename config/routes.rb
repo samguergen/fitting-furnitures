@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   post '/trade' => 'furnitures#trade'
   post '/add_wishlist' => 'home#add_wishlist'
 
+  get 'furnitures/wishlist'
+
 end
