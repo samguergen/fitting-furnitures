@@ -1,17 +1,11 @@
-<div class="wishlist">
+<div class="wishlist container">
+	<h2> Wishlist </h2>
 
-My wishlist:
-
-count: <% @user_fav.each do |ufav| %> 
-<%= ufav %>
-<%= ufav.furniture_id %>, <%= ufav.user_id %> <br>
-<% end %>
-
-2count: <% @fav_furnis.each do |ufav| %> 
-<%= ufav %>
-<%= ufav.name %>
-
-<% end %>
+	<div class="wishlist-imgs">
+		<% @fav_furnis.each do |ufav| %> 
+		<div class="wishlist-img"><img src="<%= ufav.image_url %>"/></div>
+		<% end %>
+	</div>
 
 
 

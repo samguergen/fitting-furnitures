@@ -84,3 +84,22 @@ img.gamble {
 		}
 	}
 }
+
+/* wishlist */
+
+.wishlist {
+	.wishlist-imgs {
+		margin-top: 10%;
+		width: 80%;
+		margin-left: 10%;
+		
+		.wishlist-img {
+			img {
+				height: 200px;
+				width: 200px;
+				margin: 5px;
+				float: left
+			}
+		}
+	}
+}

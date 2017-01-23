@@ -28,13 +28,8 @@ class HomeController < ApplicationController
       redirect_to '/home/error'
     else
       @user_fav = Wishlist.where(user_id: current_user.id)
-      puts 'fav is ' #array
-      puts @user_fav
-      puts 'favz furni'
       @fav_furnis = []
       @user_fav.each do |fav|
-        puts 'each is '
-        puts fav
         furni = Furniture.find(fav.furniture_id)
         @fav_furnis << furni
       end
