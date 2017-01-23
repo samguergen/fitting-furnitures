@@ -35,14 +35,10 @@ class HomeController < ApplicationController
       @user_fav.each do |fav|
         puts 'each is '
         puts fav
-        # @fav_furnis << fav.favorite
+        furni = Furniture.find(fav.furniture_id)
+        @fav_furnis << furni
       end
-
-      puts @fav_furnis
-      
-      # @fav_furni = @user_fav.
-      # puts @user_fav.furniture_id
-      # puts @user_fav.user_id
+      return @fav_furnis
     end   
   end  
 
