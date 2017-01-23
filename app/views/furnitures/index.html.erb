@@ -15,7 +15,7 @@
             <a style="width:200px; height: 200px" href="/furnitures/<%= furniture.id %>">
             <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/></a>
             <div class="descri-long">
-              <a href="/furnitures/<%= furniture.id %>"><button style="margin-left: -27%" type="button" class="btn-group btn-group-xs btn-wishlist">View Details</button></a>
+              <a href="/furnitures/<%= furniture.id %>"><button style="margin-right: 5px; margin-left: -5px;" type="button" class="btn-group btn-group-xs btn-wishlist">View Details</button></a>
                 <%= button_to "Save to Wishlist", add_wishlist_path, method: :post, class: "btn-group btn-group-xs btn-wishlist", params: { furniture_id: furniture.id, user_id: session[:user_id] } %>
             </div> 
           </div><!-- furni-img -->
