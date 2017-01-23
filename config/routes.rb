@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   post '/add_wishlist' => 'home#add_wishlist'
 
   get 'furnitures/wishlist'
+  get 'home/wish'
 
 end

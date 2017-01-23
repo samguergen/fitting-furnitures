@@ -28,7 +28,8 @@ class HomeController < ApplicationController
     else
       flash[:alert] = "Wishlist couldn't be saved"
     end
-    redirect_to '/home/wishlist', :fav => @user_fav
+    # redirect_to '/home/wishlist', :fav => @user_fav
+    redirect_to home_wish_path(@user_fav)
   end
 
   def settings
