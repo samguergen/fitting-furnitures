@@ -16,10 +16,14 @@ body {
 
 .auth-info {
 	position: absolute;
-    top: 1%;
+    top: 2%;
+    border: 1px solid;
     left: 18%;
+    padding: 5px;
+    border-radius: 5px;
     color: #c09853;
     font-style: italic;
+    text-align: center;
 }
 
 img.logo {

@@ -125,7 +125,8 @@
 
 <div class="auth-info">
   <% if current_user %>
-  Signed in as <%= current_user.name %>
+  Signed in as <%= current_user.name %> <br>
+  <%= current_user.furnipoints %> furnipts
 <% else %>
   Welcome, newbie! Have you signed up yet?
 <% end %>
