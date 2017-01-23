@@ -2,16 +2,6 @@ class HomeController < ApplicationController
   def index    
   end
 
-  def wishlist
-  	if current_user == nil
-  		redirect_to '/home/error'
-    else
-      @user_fav = Wishlist.find_by(user_id: current_user.id)
-      puts 'fav is '
-      puts @user_fav
-  	end  	
-  end
-
   def add_wishlist
     puts 'insidez add_wishlist'
     relevant_furni = Furniture.find(params[:furniture_id])
@@ -43,7 +33,6 @@ class HomeController < ApplicationController
       puts 'favz furni id'
       puts @user_fav.furniture_id
       puts @user_fav.user_id
-      puts @user_fav.furnitures.image
     end   
   end  
 
