@@ -3,12 +3,9 @@
 
 	<div class="wishlist-imgs">
 		<% @fav_furnis.each do |ufav| %> 
-		<div class="wishlist-img"><img src="<%= ufav.image_url %>"/></div>
+		<div class="wishlist-img">
+			<a href="/furnitures/<%= ufav.id %>"><img src="<%= ufav.image_url %>"/></a>
+			</div>
 		<% end %>
 	</div>
-
-
-
-
-
 </div>

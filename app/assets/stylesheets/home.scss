@@ -92,13 +92,14 @@ img.gamble {
 		margin-top: 10%;
 		width: 80%;
 		margin-left: 10%;
-		
+
 		.wishlist-img {
 			img {
-				height: 200px;
-				width: 200px;
-				margin: 5px;
-				float: left
+				height: 150px;
+				width: 150px;
+				margin: 15px;
+				float: left;
+				border-radius: 5px;
 			}
 		}
 	}
