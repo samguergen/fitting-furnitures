@@ -29,8 +29,23 @@ class HomeController < ApplicationController
       flash[:alert] = "Wishlist couldn't be saved"
     end
     # redirect_to '/home/wishlist', :fav => @user_fav
+    @fav = Furniture.where()
     redirect_to home_wish_path(@user_fav)
   end
+
+  def wishlist
+    if current_user == nil
+      redirect_to '/home/error'
+    else
+      @user_fav = Wishlist.find_by(user_id: current_user.id)
+      puts 'fav is '
+      puts @user_fav
+      puts 'favz furni id'
+      puts @user_fav.furniture_id
+      puts @user_fav.user_id
+      puts @user_fav.furnitures.image
+    end   
+  end  
 
   def settings
   	if current_user == nil
