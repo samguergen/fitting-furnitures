@@ -2,10 +2,17 @@
 
 My wishlist:
 
-count: <%= @user_fav %> <br>
-2count: <% @user_fav.each do |ufav| %> 
+count: <% @user_fav.each do |ufav| %> 
 <%= ufav %>
+<%= ufav.furniture_id %>, <%= ufav.user_id %> <br>
 <% end %>
+
+2count: <% @fav_furnis.each do |ufav| %> 
+<%= ufav %>
+<%= ufav.name %>
+
+<% end %>
+
 
 
 
