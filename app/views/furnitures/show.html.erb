@@ -22,6 +22,7 @@
         <img src=<%= @furniture.image_url %>/>
           <p class="trade-buy" style="margin-top:10px">
             <button type="button" class="btn btn-default btn-md openmodal" data-toggle="modal" data-target="#myModalPurchase" data-id="<%= @furniture.furnipoints %>, <%= @furniture.id %>">Buy</button>
+            <button type="button" class="btn btn-default btn-md openmodal2" data-toggle="modal" data-target="#myModalExchange" data-id="<%= @furniture.furnipoints %>, <%= @furniture.id %>">Trade</button>
             
           </p>
       </div>
@@ -92,6 +93,7 @@
       </div>
       
     </div>
+    
   </div>
 
 <script>
