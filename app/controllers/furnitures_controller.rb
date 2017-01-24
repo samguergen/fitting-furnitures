@@ -8,6 +8,10 @@ class FurnituresController < ApplicationController
     if session[:user_id]
       @current_user = User.find(session[:user_id])
       @current_furni = @current_user.furnitures
+      @user_of_furnis = []
+      @current_furni.each do |furni|
+        @user_of_furnis << User.find(furni.user_id)
+      end
     end
   end
 

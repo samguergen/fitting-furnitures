@@ -12,6 +12,7 @@
         <div class="furni-obj">
           <div class="furni-line1">
           <div class="furni-img">
+            <a class="owner" href="/users/<%=furniture.user_id %>">owned by <%=furniture.user.name %></a>
             <a style="width:200px; height: 200px" href="/furnitures/<%= furniture.id %>">
             <img style="width:200px; height: 200px" src=<%= furniture.image_url %>/></a>
             <div class="descri-long">
