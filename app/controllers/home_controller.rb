@@ -32,7 +32,11 @@ class HomeController < ApplicationController
   #delete
   def remove_wishlist
     puts 'inside remove wishlist'
-    puts params[:wishlist_id]
+    curr_wish = params[:wishlist_id]
+    rm_wish = Wishlist.find(params[:wishlist_id])
+    puts rm_wish
+    rm_wish.destroy
+    redirect_to '/home/wishlist'
   end
 
 
@@ -42,6 +46,9 @@ class HomeController < ApplicationController
     else
       @user_fav = Wishlist.where(user_id: current_user.id)
       @fav_furnis = []
+      if @user_fav.count > 1
+        @first_id = @user_fav[0].id
+      end
       @user_fav.each do |fav|
         furni = Furniture.find(fav.furniture_id)
         @fav_furnis << furni
