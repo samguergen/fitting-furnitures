@@ -6,7 +6,7 @@
 		<div class="wishlist-img">
 			<a href="/furnitures/<%= ufav.id %>"><img src="<%= ufav.image_url %>"/></a>
 		</div>
-		<%= button_to "Remove", remove_wishlist_path, method: :delete, class: "btn-group btn-group-xs btn-wishlist", params: { wishlist_id: @first_id } %>
+		<%= button_to "Remove", remove_wishlist_path, method: :delete, class: "btn-group btn-group-xs btn-wishlist btn-wishlist-rm", params: { wishlist_id: @first_id } %>
 		<% end %>
 	</div>
 </div>
