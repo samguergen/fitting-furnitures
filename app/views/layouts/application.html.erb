@@ -72,10 +72,10 @@
     			    <hr>
                 <%= form_for 'users'  do |f| %>
                   <div class="form-labels">
-                    name: </br>
+                    username: </br>
                     age: </br>
                     location: </br>
-                    description: </br>
+                    about you: </br>
                     gender:</br>
                     <div style="margin-top: 24%; margin-bottom: -26%;">email: </div></br>
                     pass: </br>
@@ -119,7 +119,7 @@
   Signed in as <%= current_user.name %> <br>
   <%= current_user.furnipoints %> furnipts
 <% else %>
-  Welcome, newbie! Have you signed up yet?
+  Welcome! Have you signed up yet?
 <% end %>
 
 </div>
