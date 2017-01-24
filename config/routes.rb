@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post '/purchase' => 'furnitures#purchase'
   post '/trade' => 'furnitures#trade'
   post '/add_wishlist' => 'home#add_wishlist'
+  delete '/remove_wishlist' => 'home#remove_wishlist'
 
   get 'furnitures/wishlist'
   get 'home/wish'

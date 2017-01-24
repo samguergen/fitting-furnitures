@@ -29,6 +29,13 @@ class HomeController < ApplicationController
     redirect_to '/home/wishlist'
   end
 
+  #delete
+  def remove_wishlist
+    puts 'inside remove wishlist'
+    puts params[:wishlist_id]
+  end
+
+
   def wishlist
     if current_user == nil
       redirect_to '/home/error'
