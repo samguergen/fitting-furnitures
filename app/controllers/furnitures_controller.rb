@@ -2,9 +2,7 @@ class FurnituresController < ApplicationController
   before_action :set_furniture, only: [:show, :edit, :update, :destroy]
 
   def index
-    @furnitures = Furniture.all
-    puts 'current user is'
-    puts session[:user_id]
+    @furnitures = Furniture.where(onsale: true)
     if session[:user_id]
       @current_user = User.find(session[:user_id])
       @current_furni = @current_user.furnitures
@@ -43,8 +41,8 @@ class FurnituresController < ApplicationController
     user_of_furni = User.find(wanted_furni.user_id)
     
     #switching furni in current user
-    wanted_furni.update(user_id: current_user.id)
-    my_chosen_furni.update(user_id: user_of_furni.id)
+    wanted_furni.update(user_id: current_user.id, onsale: false)
+    my_chosen_furni.update(user_id: user_of_furni.id, onsale: false)
 
     redirect_to '/furnitures'
   end
@@ -66,7 +64,7 @@ class FurnituresController < ApplicationController
     curr_user.update(furnipoints: curr_new_furnipts)
 
     #3-transferring furni from owner to buyer
-    the_furni.update(user_id: curr_user.id)
+    the_furni.update(user_id: curr_user.id, onsale: false)
 
     redirect_to '/furnitures'
   end
