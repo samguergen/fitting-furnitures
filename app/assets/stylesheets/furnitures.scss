@@ -6,7 +6,7 @@ tr, td {
 
 /* new furniture form */
 
-.furni-form {
+.furni-form, .user-form {
 	background: rgba(192, 152, 23, 0.24);
     margin-left: auto;
     margin-right: auto;
@@ -20,16 +20,16 @@ tr, td {
     	padding: 5px;
     }
 
-    input#furniture_content {
+    input#furniture_content, input#user_description, {
 	    width: 70%;
 	    height: 70px;
 	}
-	input#furniture_image_url {
+	input#furniture_image_url, input#user_image_url {
 		width: 70%;
 	}
 }
 
-form#edit_furniture_1 {
+form#edit_furniture_1, form#edit_user {
     margin-left: 10%;
     text-align: center;
 }
