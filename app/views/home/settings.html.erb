@@ -1,7 +1,7 @@
 <div class="settings">
 
 <div class="setting-links">
-	<a href="/users/<%= current_user %>/edit"><button class="btn btn-warning settings-edit">Edit Profile</button></a>
+	<a href="/users/<%= current_user.id %>/edit"><button class="btn btn-warning settings-edit">Edit Profile</button></a>
 
 	<%= button_to "Delete Your Account", { :action=>"destroy", :controller=>"users", id: current_user.id }, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning settings-cancel"  %>
 
