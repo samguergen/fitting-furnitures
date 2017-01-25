@@ -80,6 +80,20 @@ img.wooden {
     border: 2px solid black;
 }
 
+.arrow img, .arrow-quote {
+    height: 54px;
+    margin-top: -6%;
+    margin-left: 84%;
+    z-index: 99;
+}
+.arrow-quote {
+	margin-top: -1%;
+    margin-left: 59%;
+    color: #ffa100;
+    font-style: italic;
+    font-weight: bold;
+}
+
 .user-zone {
 	border-radius: 5px !important;
 	width: 200px;
