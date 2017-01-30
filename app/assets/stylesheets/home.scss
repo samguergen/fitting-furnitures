@@ -1,19 +1,13 @@
-.arrow {
+.arrow, .arrow img {
 	position: absolute;
     margin-left: 83%;
-    margin-top: -1%;
-}
-
-.arrow img, .arrow-quote {
-    height: 54px;
-    margin-top: -1%;
+    margin-top: -5%;
     z-index: 99;
-    	position: absolute;
-    margin-left: 83%;
-    margin-top: -1%;
+    height: 54px;
 }
-.arrow-quote {
 
+.arrow-quote {
+	z-index: 99;
 	margin-top: 1%;
     margin-left: 59%;
     color: #ffa100;
