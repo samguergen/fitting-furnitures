@@ -1,12 +1,13 @@
 .arrow, .arrow img {
 	position: absolute;
+	z-index: 99;
     margin-left: 83%;
     margin-top: -5%;
-    z-index: 99;
     height: 54px;
 }
 
 .arrow-quote {
+	position: absolute;
 	z-index: 99;
 	margin-top: 1%;
     margin-left: 59%;
@@ -90,6 +91,10 @@
 	line-height: 1.4;
 	font-weight: bold;
 	color: #4c2316;
+}
+
+.lottery {
+	padding-top: 5%;
 }
 
 img.gamble {

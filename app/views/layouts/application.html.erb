@@ -117,6 +117,7 @@
 
 </nav>	
 
+
 <div class="auth-info">
   <% if current_user %>
   Signed in as <%= current_user.name %> <br>
@@ -126,6 +127,9 @@
 <% end %>
 
 </div>
+
+<%= image_tag("columns.png", :alt => "columns", :class => "columns") %>
+<%= image_tag("columns.png", :alt => "columns2", :class => "columns2") %>
 
 
 <%= yield %>

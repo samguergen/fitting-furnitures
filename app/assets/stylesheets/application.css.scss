@@ -105,9 +105,6 @@ img.wooden {
     }
 }
 
-.user-zone {
-	
-}
 	
 .dropdown {
 	color: #c09853;
@@ -117,6 +114,20 @@ img.wooden {
 	margin-left: 10%;
     margin-top: 5%;
 }
+
+
+img.columns, img.columns2 {
+	position: absolute;
+	z-index: 99;
+	top: 14%;
+	height: 80%;
+}
+
+img.columns2 {
+    margin-left: 88%;
+}
+
+
 
 footer {
     position: absolute;
